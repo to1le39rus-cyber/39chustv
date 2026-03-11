@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="39 ЧУВСТВО — студия йоги и телесной перезагрузки в Калининграде. 5 пространств: йога, тренажёр Правило, массаж, звукотерапия, практики для двоих.">
+  <title>39 ЧУВСТВО — Студия телесной перезагрузки в Калининграде</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- НАВИГАЦИЯ -->
+  <header class="header" id="header">
+    <div class="header__inner">
+      <a href="#" class="logo">39 <span>ЧУВСТВО</span></a>
+      <nav class="nav" id="nav">
+        <a href="#directions" class="nav__link">Направления</a>
+        <a href="#pravilo" class="nav__link">Правило</a>
+        <a href="#founders" class="nav__link">О нас</a>
+        <a href="#packages" class="nav__link">Пакеты</a>
+        <a href="#contact" class="nav__link nav__link--cta">Записаться</a>
+      </nav>
+      <button class="burger" id="burger" aria-label="Меню">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ГЕРОЙ -->
+  <section class="hero" id="hero">
+    <div class="hero__bg">
+      <div class="hero__overlay"></div>
+    </div>
+    <div class="hero__content">
+      <p class="hero__eyebrow">Калининград · у Балтийского моря</p>
+      <h1 class="hero__title">Студия<br><em>телесной</em><br>перезагрузки</h1>
+      <p class="hero__sub">5 пространств в одном: йога, Правило, массаж,<br class="d-none-mobile"> звукотерапия и практики для двоих</p>
+      <div class="hero__btns">
+        <a href="#contact" class="btn btn--gold">Начать перезагрузку</a>
+        <a href="#diagnostic" class="btn btn--outline">Пройти диагностику</a>
+      </div>
+    </div>
+    <div class="hero__scroll">
+      <span></span>
+    </div>
+  </section>
+
+  <!-- БОЛЬ / РЕЗУЛЬТАТ -->
+  <section class="pain" id="pain">
+    <div class="container">
+      <div class="pain__header">
+        <span class="section-tag">Зачем приходят</span>
+        <h2 class="section-title">Перезагрузка через&nbsp;тело<br>за&nbsp;30&nbsp;дней</h2>
+        <p class="section-sub">Мы не продаём «цигун» или «йогу». Мы решаем конкретные задачи.</p>
+      </div>
+      <div class="pain__grid">
+        <div class="pain__card">
+          <h3>Хроническая боль</h3>
+          <p>Болит спина, шея, плечи — тело сигнализирует. Правило и йога убирают зажимы там, где не справляется массаж.</p>
+        </div>
+        <div class="pain__card">
+          <h3>Стресс и тревога</h3>
+          <p>Нервная система перегружена. Через тело мы выходим в состояние покоя — без таблеток и медитаций «в пустоту».</p>
+        </div>
+        <div class="pain__card">
+          <h3>Усталость не проходит</h3>
+          <p>Сон есть, но сил нет. Работаем с глубинными причинами через дыхание, движение и звук.</p>
+        </div>
+        <div class="pain__card">
+          <h3>Холодные отношения</h3>
+          <p>Практики для двоих — это не романтика для галочки. Это реальное сближение через тело и совместный опыт.</p>
+        </div>
+      </div>
+      <div class="pain__cta">
+        <a href="#diagnostic" class="btn btn--gold" id="diagnostic">Пройти диагностику бесплатно</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- НАПРАВЛЕНИЯ -->
+  <section class="directions" id="directions">
+    <div class="container">
+      <div class="directions__header">
+        <span class="section-tag">Чем занимаемся</span>
+        <h2 class="section-title">Наши направления</h2>
+      </div>
+      <div class="directions__tabs">
+        <button class="tab active" data-tab="yoga">Йога и практики</button>
+        <button class="tab" data-tab="body">Телесная терапия</button>
+        <button class="tab" data-tab="couple">Для двоих</button>
+        <button class="tab" data-tab="community">Комьюнити</button>
+      </div>
+
+      <div class="directions__content" id="tab-yoga">
+        <div class="services-grid">
+          <div class="service-card">
+            <div class="service-card__img" style="background-image:url('img/hatha.jpg')"></div>
+            <div class="service-card__body">
+              <h3>Хатха-йога</h3>
+              <p>Классическая практика для гибкости, силы и внутреннего равновесия. Подходит с нуля.</p>
+              <a href="#contact" class="service-card__link">Записаться →</a>
+            </div>
+          </div>
+          <div class="service-card">
+            <div class="service-card__img" style="background-image:url('img/kundalini.jpg')"></div>
+            <div class="service-card__body">
+              <h3>Кундалини-йога</h3>
+              <p>Энергетическая практика. Пробуждает ресурс, снимает усталость накопленного стресса.</p>
+              <a href="#contact" class="service-card__link">Записаться →</a>
+            </div>
+          </div>
+          <div class="service-card">
+            <div class="service-card__img" style="background-image:url('img/hammock.jpg')"></div>
+            <div class="service-card__body">
+              <h3>Йога в гамаках</h3>
+              <p>Воздушная йога с разгрузкой позвоночника. Ощущение полёта и глубокого расслабления.</p>
+              <a href="#contact" class="service-card__link">Записаться →</a>
+            </div>
+          </div>
+          <div class="service-card">
+            <div class="service-card__img" style="background-image:url('img/qigong.jpg')"></div>
+            <div class="service-card__body">
+              <h3>Цигун</h3>
+              <p>Древняя китайская система движений. Улучшает сон, восстанавливает энергию, снижает давление.</p>
+              <a href="#contact" class="service-card__link">Записаться →</a>
+            </div>
+          </div>
+          <div class="service-card">
+            <div class="service-card__img" style="background-image:url('img/beloyar.jpg')"></div>
+            <div class="service-card__body">
+              <h3>Белояр</h3>
+              <p>Славянская оздоровительная система. Работа с телом и природными ритмами.</p>
+              <a href="#contact" class="service-card__link">Записаться →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="directions__content hidden" id="tab-body">
+        <div class="services-grid">
+          <div class="service-card service-card--featured">
+            <div class="service-card__img" style="background-image:url('img/pravilo.jpg')"></div>
+            <div class="service-card__body">
+              <span class="badge">Единственный в регионе</span>
+              <h3>Тренажёр «ПравИло»</h3>
+              <p>Глубокая работа с позвоночником и нервной системой. После первого занятия многие впервые чувствуют жизнь без боли.</p>
+              <a href="#pravilo" class="service-card__link">Подробнее →</a>
+            </div>
+          </div>
+          <div class="service-card">
+            <div class="service-card__img" style="background-image:url('img/massage.jpg')"></div>
+            <div class="service-card__body">
+              <h3>Массаж</h3>
+              <p>Несколько видов массажа: спортивный, расслабляющий, антицеллюлитный.</p>
+              <a href="#contact" class="service-card__link">Записаться →</a>
+            </div>
+          </div>
+          <div class="service-card">
+            <div class="service-card__img" style="background-image:url('img/nails.jpg')"></div>
+            <div class="service-card__body">
+              <h3>Практика на гвоздях</h3>
+              <p>Остановить ум, выйти из стресса, перезагрузить нервную систему за один сеанс.</p>
+              <a href="#contact" class="service-card__link">Записаться →</a>
+            </div>
+          </div>
+          <div class="service-card">
+            <div class="service-card__img" style="background-image:url('img/sound.jpg')"></div>
+            <div class="service-card__body">
+              <h3>Звукотерапия</h3>
+              <p>Поющие чаши и звуковые ванны. Глубокое расслабление и работа с психосоматикой.</p>
+              <a href="#contact" class="service-card__link">Записаться →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="directions__content hidden" id="tab-couple">
+        <div class="services-grid">
+          <div class="service-card">
+            <div class="service-card__img" style="background-image:url('img/couple.jpg')"></div>
+            <div class="service-card__body">
+              <h3>Парные практики</h3>
+              <p>Йога, дыхание и телесные практики для двоих. Реальное сближение через совместный опыт.</p>
+              <a href="#contact" class="service-card__link">Записаться →</a>
+            </div>
+          </div>
+          <div class="service-card">
+            <div class="service-card__img" style="background-image:url('img/39love.jpg')"></div>
+            <div class="service-card__body">
+              <h3>«39 оттенков любви»</h3>
+              <p>Программа для пар: свидание в формате живого опыта, который невозможно забыть.</p>
+              <a href="#contact" class="service-card__link">Записаться →</a>
+            </div>
+          </div>
+          <div class="service-card">
+            <div class="service-card__img" style="background-image:url('img/date.jpg')"></div>
+            <div class="service-card__body">
+              <h3>Свидание в студии</h3>
+              <p>Персональное пространство, ароматы, практика и уютная атмосфера. Незабываемый вечер.</p>
+              <a href="#contact" class="service-card__link">Записаться →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="directions__content hidden" id="tab-community">
+        <div class="services-grid">
+          <div class="service-card">
+            <div class="service-card__img" style="background-image:url('img/men.jpg')"></div>
+            <div class="service-card__body">
+              <h3>Мужские круги</h3>
+              <p>Практики для мужчин: Правило, цигун, белояр, работа с силой и концентрацией.</p>
+              <a href="#contact" class="service-card__link">Записаться →</a>
+            </div>
+          </div>
+          <div class="service-card">
+            <div class="service-card__img" style="background-image:url('img/women.jpg')"></div>
+            <div class="service-card__body">
+              <h3>Женские круги</h3>
+              <p>Восстановление женской природы через движение, тепло и совместное пространство.</p>
+              <a href="#contact" class="service-card__link">Записаться →</a>
+            </div>
+          </div>
+          <div class="service-card">
+            <div class="service-card__img" style="background-image:url('img/longevity.jpg')"></div>
+            <div class="service-card__body">
+              <h3>Клуб долголетия</h3>
+              <p>Программа активного здоровья для тех, кто хочет оставаться в форме в любом возрасте.</p>
+              <a href="#contact" class="service-card__link">Записаться →</a>
+            </div>
+          </div>
+          <div class="service-card">
+            <div class="service-card__img" style="background-image:url('img/concert.jpg')"></div>
+            <div class="service-card__body">
+              <h3>Концерты и события</h3>
+              <p>Живая музыка, медитации, авторские вечера. Наполняемся вместе.</p>
+              <a href="#contact" class="service-card__link">Записаться →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ПРАВИЛО — FEATURED BLOCK -->
+  <section class="pravilo" id="pravilo">
+    <div class="pravilo__visual"></div>
+    <div class="pravilo__content">
+      <span class="section-tag section-tag--light">Главный актив студии</span>
+      <h2 class="section-title section-title--light">Тренажёр «ПравИло»<br><em>— единственный в регионе</em></h2>
+      <p class="pravilo__text">Это не растяжка. Это глубокая работа с позвоночником, суставами и нервной системой. После первого занятия многие впервые за годы чувствуют жизнь без боли.</p>
+      <div class="pravilo__facts">
+        <div class="pravilo__fact">
+          <strong>Снимаем зажимы</strong>
+          <span>там, где не справляется массаж</span>
+        </div>
+        <div class="pravilo__fact">
+          <strong>Улучшаем сон</strong>
+          <span>через работу с нервной системой</span>
+        </div>
+        <div class="pravilo__fact">
+          <strong>Снижаем тревожность</strong>
+          <span>через тело, без медикаментов</span>
+        </div>
+        <div class="pravilo__fact">
+          <strong>Работаем с позвоночником</strong>
+          <span>глубже, чем мануальная терапия</span>
+        </div>
+      </div>
+      <div class="pravilo__who">
+        <div class="pravilo__who-col">
+          <h4>Кому подходит:</h4>
+          <ul>
+            <li>Сидячая работа, боли в спине</li>
+            <li>Хроническое напряжение</li>
+            <li>Восстановление после травм</li>
+            <li>Спортсмены и активные люди</li>
+          </ul>
+        </div>
+        <div class="pravilo__who-col">
+          <h4>Противопоказания:</h4>
+          <ul>
+            <li>Острые воспалительные процессы</li>
+            <li>Онкология</li>
+            <li>Беременность</li>
+          </ul>
+        </div>
+      </div>
+      <a href="#contact" class="btn btn--gold">Записаться на Правило</a>
+    </div>
+  </section>
+
+  <!-- ДЛЯ КОГО -->
+  <section class="forwhom" id="forwhom">
+    <div class="container">
+      <span class="section-tag">Аудитория</span>
+      <h2 class="section-title">Вам к нам, если:</h2>
+      <div class="forwhom__grid">
+        <div class="forwhom__item">
+          <div class="forwhom__num">01</div>
+          <h3>Сидячая работа</h3>
+          <p>Офис, компьютер, напряжение в шее и пояснице — мы это убираем.</p>
+        </div>
+        <div class="forwhom__item">
+          <div class="forwhom__num">02</div>
+          <h3>Хронический стресс</h3>
+          <p>Тревожность, раздражительность, бессонница — работаем с причиной через тело.</p>
+        </div>
+        <div class="forwhom__item">
+          <div class="forwhom__num">03</div>
+          <h3>Кризис в отношениях</h3>
+          <p>Пара, которая устала. Практики для двоих помогают вернуть близость.</p>
+        </div>
+        <div class="forwhom__item">
+          <div class="forwhom__num">04</div>
+          <h3>Хочу быть в форме</h3>
+          <p>Без жёстких тренировок. Мягко, глубоко, с результатом в теле и голове.</p>
+        </div>
+        <div class="forwhom__item">
+          <div class="forwhom__num">05</div>
+          <h3>Нет энергии</h3>
+          <p>Сон есть, а сил нет. Находим и убираем блоки, мешающие жить полноценно.</p>
+        </div>
+        <div class="forwhom__item">
+          <div class="forwhom__num">06</div>
+          <h3>Первый раз в йоге</h3>
+          <p>Специальные группы для начинающих. Без предрассудков и гибкой подготовки.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ДЛЯ МУЖЧИН -->
+  <section class="formen" id="formen">
+    <div class="container">
+      <div class="formen__inner">
+        <div class="formen__text">
+          <span class="section-tag">Для мужчин</span>
+          <h2 class="section-title">Йога — это не только<br>для женщин</h2>
+          <p>Правило, цигун, белояр, мужские круги — практики, которые работают со стрессом, силой и концентрацией. Без эзотерики, с реальным результатом в теле.</p>
+          <ul class="formen__list">
+            <li>Снимает хроническое напряжение в спине</li>
+            <li>Улучшает качество сна и восстановление</li>
+            <li>Даёт ясность и концентрацию</li>
+            <li>Работает с мужской энергией и силой</li>
+          </ul>
+          <a href="#contact" class="btn btn--gold">Записаться</a>
+        </div>
+        <div class="formen__visual"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ДЛЯ РЕЛОКАНТОВ -->
+  <section class="relocate" id="relocate">
+    <div class="container">
+      <div class="relocate__inner">
+        <div class="relocate__visual"></div>
+        <div class="relocate__text">
+          <span class="section-tag">Новые в Калининграде?</span>
+          <h2 class="section-title">Недавно переехали<br>в Калининград?</h2>
+          <p>Мы помогаем быстрее адаптироваться через тело и комьюнити. Новый город — лучший повод начать жить иначе.</p>
+          <p>Мы создали студию именно в Зеленоградске — там, где близость моря, тишина и живая энергия места усиливают эффект каждой практики.</p>
+          <a href="#contact" class="btn btn--border">Прийти на первое занятие</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ОСНОВАТЕЛИ -->
+  <section class="founders" id="founders">
+    <div class="container">
+      <span class="section-tag">Наш путь</span>
+      <h2 class="section-title">История основателей</h2>
+      <p class="section-sub">Люди идут на путь, а не просто на практику.</p>
+      <div class="founders__grid">
+        <div class="founders__card">
+          <div class="founders__photo founders__photo--ilya"></div>
+          <div class="founders__body">
+            <h3>Илья</h3>
+            <p class="founders__role">Основатель · Мастер Правила</p>
+            <p>Начинал с травмы и хронической боли в спине. Классические методы не помогали. Встреча с тренажёром Правило изменила всё — первый раз за годы почувствовал тело без боли. Это стало делом жизни: передавать этот опыт другим.</p>
+            <blockquote>«Правило — это не упражнение. Это разговор с телом на его языке.»</blockquote>
+          </div>
+        </div>
+        <div class="founders__card">
+          <div class="founders__photo founders__photo--zhenya"></div>
+          <div class="founders__body">
+            <h3>Женя</h3>
+            <p class="founders__role">Сооснователь · Преподаватель йоги</p>
+            <p>Токсичная корпоративная жизнь, нелюбимая работа, постоянная гонка. Йога стала спасением — и затем профессией. Сменила мегаполис на жизнь у Балтийского моря. Сейчас помогает другим найти этот путь.</p>
+            <blockquote>«Тело знает всё. Наша задача — научиться его слушать.»</blockquote>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- СТАРТОВЫЙ ПАКЕТ -->
+  <section class="packages" id="packages">
+    <div class="container">
+      <span class="section-tag">Начни выгодно</span>
+      <h2 class="section-title">Стартовый пакет</h2>
+      <p class="section-sub">Идеально, если вы первый раз или хотите попробовать сразу несколько направлений.</p>
+      <div class="packages__grid">
+        <div class="package-card">
+          <div class="package-card__top">
+            <span class="package-card__name">Знакомство</span>
+            <div class="package-card__price">1 занятие</div>
+          </div>
+          <ul class="package-card__list">
+            <li>Любое групповое занятие</li>
+            <li>Бесплатная консультация</li>
+            <li>Знакомство со студией</li>
+          </ul>
+          <a href="#contact" class="btn btn--outline-dark">Попробовать</a>
+        </div>
+        <div class="package-card package-card--featured">
+          <div class="package-card__badge">Популярный</div>
+          <div class="package-card__top">
+            <span class="package-card__name">Перезагрузка</span>
+            <div class="package-card__price">30 дней</div>
+          </div>
+          <ul class="package-card__list">
+            <li>3 групповых занятия</li>
+            <li>1 занятие на Правиле</li>
+            <li>Скидка 20% на массаж</li>
+            <li>Поддержка куратора</li>
+          </ul>
+          <a href="#contact" class="btn btn--gold">Начать перезагрузку</a>
+        </div>
+        <div class="package-card">
+          <div class="package-card__top">
+            <span class="package-card__name">VIP-практика</span>
+            <div class="package-card__price">Индивидуально</div>
+          </div>
+          <ul class="package-card__list">
+            <li>Персональная программа</li>
+            <li>Правило + звукотерапия</li>
+            <li>Массаж по выбору</li>
+            <li>Формат под ваш запрос</li>
+          </ul>
+          <a href="#contact" class="btn btn--outline-dark">Обсудить</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ОТЗЫВЫ -->
+  <section class="reviews" id="reviews">
+    <div class="container">
+      <span class="section-tag">Результаты</span>
+      <h2 class="section-title">Истории трансформации</h2>
+      <div class="reviews__grid">
+        <div class="review-card">
+          <div class="review-card__stars">★★★★★</div>
+          <p>«После первого занятия на Правиле спина перестала болеть. Я не верила, что это возможно. Хожу уже 3 месяца — ощущение, что мне вернули тело.»</p>
+          <div class="review-card__author">
+            <div class="review-card__avatar"></div>
+            <div>
+              <strong>Марина, 38 лет</strong>
+              <span>Правило · 3 месяца</span>
+            </div>
+          </div>
+        </div>
+        <div class="review-card">
+          <div class="review-card__stars">★★★★★</div>
+          <p>«Пришёл из-за спины. Остался ради себя. Мужские круги и цигун — это совершенно другой уровень осознанности. Рекомендую всем мужикам.»</p>
+          <div class="review-card__author">
+            <div class="review-card__avatar"></div>
+            <div>
+              <strong>Дмитрий, 44 года</strong>
+              <span>Правило · Цигун · 6 месяцев</span>
+            </div>
+          </div>
+        </div>
+        <div class="review-card">
+          <div class="review-card__stars">★★★★★</div>
+          <p>«Мы с мужем пришли на парные практики в момент кризиса. Это вернуло нас друг к другу. Студия — это особое место, там происходит настоящее.»</p>
+          <div class="review-card__author">
+            <div class="review-card__avatar"></div>
+            <div>
+              <strong>Алёна, 34 года</strong>
+              <span>Парные практики</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ФОРМА ЗАПИСИ -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="contact__inner">
+        <div class="contact__text">
+          <span class="section-tag section-tag--light">Первый шаг</span>
+          <h2 class="section-title section-title--light">Запишитесь<br>на&nbsp;бесплатную<br>консультацию</h2>
+          <p>Расскажем какой формат подходит именно вам. Ответим на все вопросы. Без давления и навязывания.</p>
+          <div class="contact__info">
+            <div class="contact__info-item">
+              <span>📍</span>
+              <span>г. Калининград, улица Олега Кошевого, 11</span>
+            </div>
+            <div class="contact__info-item">
+              <span>📍</span>
+              <span>г. Зеленоградск, Садовая улица, 32а</span>
+            </div>
+            <div class="contact__info-item">
+              <span>💬</span>
+              <a href="https://t.me/Jenny_Larionova" target="_blank" rel="noopener noreferrer">Написать в телеграм</a>
+            </div>
+            <div class="contact__info-item">
+              <span>📞</span>
+              <a href="tel:+79853432888">+7 985 343-28-88 — Илья</a>
+            </div>
+            <div class="contact__info-item">
+              <span>📞</span>
+              <a href="tel:+79051983999">+7 905 198-39-99 — Евгения</a>
+            </div>
+            <div class="contact__info-item">
+              <span>📞</span>
+              <a href="tel:+79804599898">+7 980 459-98-98 — общий номер</a>
+            </div>
+          </div>
+        </div>
+        <form class="contact__form" id="contactForm" novalidate>
+          <div class="form-group">
+            <label for="name">Ваше имя *</label>
+            <input type="text" id="name" name="name" placeholder="Как вас зовут?" required>
+            <span class="form-error" id="nameError"></span>
+          </div>
+          <div class="form-group">
+            <label for="phone">Телефон / Telegram *</label>
+            <input type="text" id="phone" name="phone" placeholder="+7 999 000-00-00 или @username" required>
+            <span class="form-error" id="phoneError"></span>
+          </div>
+          <div class="form-group">
+            <label for="service">Что интересует?</label>
+            <select id="service" name="service">
+              <option value="">Выберите направление</option>
+              <option value="Тренажёр Правило">Тренажёр Правило</option>
+              <option value="Хатха-йога">Хатха-йога</option>
+              <option value="Кундалини-йога">Кундалини-йога</option>
+              <option value="Йога в гамаках">Йога в гамаках</option>
+              <option value="Цигун">Цигун</option>
+              <option value="Массаж">Массаж</option>
+              <option value="Практика на гвоздях">Практика на гвоздях</option>
+              <option value="Звукотерапия">Звукотерапия</option>
+              <option value="Парные практики">Парные практики</option>
+              <option value="Стартовый пакет 30 дней">Стартовый пакет 30 дней</option>
+              <option value="VIP-практика">VIP-практика</option>
+              <option value="Другое">Другое / Не знаю</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Ваш запрос или вопрос</label>
+            <textarea id="message" name="message" rows="3" placeholder="Расскажите коротко, что беспокоит или что хотите получить..."></textarea>
+          </div>
+          <button type="submit" class="btn btn--gold btn--full" id="submitBtn">
+            <span class="btn-text">Отправить заявку</span>
+            <span class="btn-loader hidden">Отправляем...</span>
+          </button>
+          <p class="form-note">Нажимая кнопку, вы соглашаетесь с <a href="#">политикой конфиденциальности</a></p>
+          <div class="form-success hidden" id="formSuccess">
+            <div class="form-success__icon">✓</div>
+            <h3>Заявка отправлена!</h3>
+            <p>Мы свяжемся с вами в течение 15 минут в рабочее время.</p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ФУТЕР -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <a href="#" class="logo logo--dark">39 <span>ЧУВСТВО</span></a>
+          <p>Студия телесной перезагрузки<br>в Калининграде · у Балтийского моря</p>
+        </div>
+        <div class="footer__nav">
+          <h4>Направления</h4>
+          <a href="#directions">Йога и практики</a>
+          <a href="#pravilo">Тренажёр Правило</a>
+          <a href="#directions">Телесная терапия</a>
+          <a href="#directions">Для двоих</a>
+        </div>
+        <div class="footer__nav">
+          <h4>Студия</h4>
+          <a href="#founders">О нас</a>
+          <a href="#packages">Пакеты</a>
+          <a href="#reviews">Отзывы</a>
+          <a href="#contact">Контакты</a>
+        </div>
+        <div class="footer__social">
+          <h4>Мы в сети</h4>
+          <a href="https://t.me/masterskaya39chuvstvo" target="_blank" rel="noopener noreferrer" class="social-link">Сообщество в Telegram</a>
+          <a href="https://vk.com/39chuvstvo" target="_blank" rel="noopener noreferrer" class="social-link">Сообщество в VK</a>
+          <a href="https://t.me/Jenny_Larionova" target="_blank" rel="noopener noreferrer" class="social-link">Личный Telegram</a>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>© 2026 39 ЧУВСТВО · Все права защищены</p>
+        <a href="#">Политика конфиденциальности</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
