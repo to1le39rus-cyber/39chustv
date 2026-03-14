@@ -1,0 +1,118 @@
+:root {
+  --cream: #FDFAF5;
+  --cream-2: #F5EDD8;
+  --dark: #1C1A16;
+  --gold: #C9A84C;
+  --gold-2: #A88930;
+  --text: #3A3730;
+  --text-light: #7A7467;
+  --white: #FFFFFF;
+  --radius: 16px;
+  --shadow: 0 4px 40px rgba(28,26,22,.10);
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-sans: 'Inter', system-ui, sans-serif;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: var(--font-sans);
+  background: var(--cream);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.service-hero {
+  min-height: 52vh;
+  background: linear-gradient(140deg, rgba(28,26,22,.88) 0%, rgba(28,26,22,.72) 52%, rgba(201,168,76,.22) 100%);
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  padding: 110px 0 70px;
+}
+
+.breadcrumb {
+  display: inline-block;
+  color: rgba(255,255,255,.72);
+  text-decoration: none;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 4.8vw, 3.4rem);
+  line-height: 1.12;
+  margin-bottom: 16px;
+}
+
+.hero-sub {
+  max-width: 720px;
+  color: rgba(255,255,255,.76);
+  font-size: 1.05rem;
+}
+
+.service-content {
+  padding: 72px 0 90px;
+}
+
+.card {
+  background: var(--white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 36px;
+}
+
+.card h2 {
+  font-family: var(--font-serif);
+  font-size: 1.7rem;
+  margin-bottom: 14px;
+  color: var(--dark);
+}
+
+.card p {
+  color: var(--text-light);
+  margin-bottom: 16px;
+}
+
+ul {
+  margin: 8px 0 22px 20px;
+  color: var(--text);
+}
+
+.btn-row {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 13px 28px;
+  border-radius: 999px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.btn-gold {
+  background: var(--gold);
+  color: var(--white);
+}
+
+.btn-gold:hover { background: var(--gold-2); }
+
+.btn-outline {
+  border: 2px solid var(--dark);
+  color: var(--dark);
+}
+
+@media (max-width: 640px) {
+  .card { padding: 24px; }
+  .service-hero { min-height: 45vh; }
+}
