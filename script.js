@@ -50,32 +50,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  /* ---- ТАБЫ НАПРАВЛЕНИЙ ---- */
-  const tabs = document.querySelectorAll('.tab');
-  const contents = {
-    yoga:      document.getElementById('tab-yoga'),
-    body:      document.getElementById('tab-body'),
-    couple:    document.getElementById('tab-couple'),
-    community: document.getElementById('tab-community'),
-  };
-  tabs.forEach(tab => {
-    tab.addEventListener('click', () => {
-      const key = tab.dataset.tab;
-      tabs.forEach(t => t.classList.remove('active'));
-      tab.classList.add('active');
-      Object.values(contents).forEach(c => c.classList.add('hidden'));
-      if (contents[key]) {
-        contents[key].classList.remove('hidden');
-        // Плавный вход
-        contents[key].style.opacity = '0';
-        requestAnimationFrame(() => {
-          contents[key].style.transition = 'opacity .35s ease';
-          contents[key].style.opacity = '1';
-        });
-      }
-    });
-  });
-
   /* ---- SCROLL REVEAL ---- */
   const revealItems = document.querySelectorAll(
     '.pain__card, .service-card, .forwhom__item, .review-card, .package-card, .founders__card, .pravilo__fact'
