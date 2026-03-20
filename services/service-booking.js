@@ -1,4 +1,115 @@
 (function () {
+
+  /* === ШАПКА САЙТА === */
+  function addSiteHeader() {
+    if (document.querySelector('.header')) return;
+    var h = document.createElement('header');
+    h.className = 'header';
+    h.id = 'header';
+    h.innerHTML =
+      '<div class="header__inner">' +
+        '<a href="/" class="logo">39 <span>ЧУВСТВО</span></a>' +
+        '<nav class="nav" id="nav">' +
+          '<div class="nav__item nav__item--dropdown">' +
+            '<a href="/#directions" class="nav__link nav__link--dropdown-toggle">Направления <span class="nav__caret" aria-hidden="true">▾</span></a>' +
+            '<div class="nav__dropdown" aria-label="Список услуг">' +
+              '<div class="nav__dropdown-group">' +
+                '<span class="nav__dropdown-title">Йога и практики</span>' +
+                '<a href="/services/hatha-yoga">Хатха-йога</a>' +
+                '<a href="/services/kundalini-yoga">Кундалини-йога</a>' +
+                '<a href="/services/aerial-yoga">Йога в гамаках</a>' +
+                '<a href="/services/qigong">Цигун</a>' +
+                '<a href="/services/beloyar">Белояр</a>' +
+              '</div>' +
+              '<div class="nav__dropdown-group">' +
+                '<span class="nav__dropdown-title">Телесная терапия</span>' +
+                '<a href="/services/pravilo">ПравИло</a>' +
+                '<a href="/services/massage">Массаж</a>' +
+                '<a href="/services/nails">Практика на гвоздях</a>' +
+                '<a href="/services/sound-therapy">Звукотерапия</a>' +
+              '</div>' +
+              '<div class="nav__dropdown-group">' +
+                '<span class="nav__dropdown-title">Для двоих</span>' +
+                '<a href="/services/couples-practice">Парные практики</a>' +
+                '<a href="/services/39-shades-of-love">39 оттенков любви</a>' +
+                '<a href="/services/date-in-studio">Свидание в студии</a>' +
+              '</div>' +
+              '<div class="nav__dropdown-group">' +
+                '<span class="nav__dropdown-title">Комьюнити</span>' +
+                '<a href="/services/mens-circle">Мужские круги</a>' +
+                '<a href="/services/womens-circle">Женские круги</a>' +
+                '<a href="/services/longevity-club">Клуб долголетия</a>' +
+                '<a href="/services/events">Концерты и события</a>' +
+              '</div>' +
+            '</div>' +
+          '</div>' +
+          '<a href="/services/pravilo" class="nav__link">Правило</a>' +
+          '<a href="/#founders" class="nav__link">О нас</a>' +
+          '<a href="/#packages" class="nav__link">Пакеты</a>' +
+          '<a href="/#contact" class="nav__link nav__link--cta">Записаться</a>' +
+        '</nav>' +
+        '<button class="burger" id="burger" aria-label="Меню">' +
+          '<span></span><span></span><span></span>' +
+        '</button>' +
+      '</div>';
+    document.body.insertBefore(h, document.body.firstChild);
+
+    /* Бургер */
+    var burger = document.getElementById('burger');
+    var nav = document.getElementById('nav');
+    if (burger && nav) {
+      burger.addEventListener('click', function () {
+        nav.classList.toggle('is-open');
+        burger.classList.toggle('is-active');
+      });
+    }
+
+    /* Dropdown на мобильном */
+    var toggleLink = nav ? nav.querySelector('.nav__link--dropdown-toggle') : null;
+    var dropdownItem = nav ? nav.querySelector('.nav__item--dropdown') : null;
+    if (toggleLink && dropdownItem) {
+      toggleLink.addEventListener('click', function (e) {
+        if (window.innerWidth > 900) return;
+        e.preventDefault();
+        dropdownItem.classList.toggle('is-expanded');
+      });
+    }
+
+    /* Sticky */
+    window.addEventListener('scroll', function () {
+      h.classList.toggle('scrolled', window.scrollY > 60);
+    }, { passive: true });
+  }
+
+  /* === КЛАСС СТРАНИЦЫ ПО URL === */
+  function setPageBodyClass() {
+    var match = window.location.pathname.match(/\/services\/([^\/]+)/);
+    if (match) {
+      document.body.classList.add('svc-' + match[1]);
+    }
+  }
+
+  /* === ФОНОВОЕ ФОТО ДЛЯ ГЕРОЯ === */
+  function setHeroImage() {
+    var hero = document.querySelector('.service-hero');
+    if (!hero || hero.classList.contains('service-hero--massage')) return;
+    var path = window.location.pathname;
+    var img;
+    if (/yoga|qigong|beloyar|aerial/.test(path))      img = '/img/yoga1.webp';
+    else if (/pravilo|nails/.test(path))              img = '/img/pravilo.webp';
+    else if (/sound|meditation|meditat/.test(path))   img = '/img/yoga.webp';
+    else if (/couple|love|date/.test(path))           img = '/img/yoga3.webp';
+    else if (/circle|longevity/.test(path))           img = '/img/yaest.webp';
+    else if (/event|concert/.test(path))              img = '/img/hiroblock.webp';
+    else if (/massage/.test(path))                    return;
+    else                                               img = '/img/yoga2.webp';
+
+    var s = document.createElement('style');
+    s.textContent = '.service-hero--with-img::before { background-image: url("' + img + '"); }';
+    document.head.appendChild(s);
+    hero.classList.add('service-hero--with-img');
+  }
+
   function addSocialPromoBlock() {
     if (document.querySelector('.social-promo')) {
       return;
@@ -84,7 +195,11 @@
   }
 
   function setup() {
+    setPageBodyClass();
+    addSiteHeader();
+    setHeroImage();
     addSocialPromoBlock();
+    addBackToTop();
 
     var modal = buildModal();
     var form = document.getElementById('bookingForm');
@@ -194,6 +309,21 @@
         submit.disabled = false;
         submit.textContent = 'Отправить';
       }
+    });
+  }
+
+  function addBackToTop() {
+    if (document.querySelector('.back-to-top')) return;
+    var btn = document.createElement('button');
+    btn.className = 'back-to-top';
+    btn.setAttribute('aria-label', 'Наверх');
+    btn.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><polyline points="18 15 12 9 6 15"/></svg>';
+    document.body.appendChild(btn);
+    window.addEventListener('scroll', function () {
+      btn.classList.toggle('visible', window.scrollY > 300);
+    }, { passive: true });
+    btn.addEventListener('click', function () {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     });
   }
 
