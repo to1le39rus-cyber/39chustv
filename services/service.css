@@ -335,9 +335,88 @@ h1 {
   color: #b94646;
 }
 
+/* ---- SOCIAL PROMO BLOCK (all services) ---- */
+.social-promo {
+  margin-top: 8px;
+  padding: 38px 32px 32px;
+  background: var(--cream-2);
+  border-radius: 18px;
+  border: 1px solid rgba(168,137,48,.18);
+  text-align: center;
+  box-shadow: none;
+}
+
+.social-promo__ornament {
+  display: block;
+  margin: 0 auto 14px;
+  color: var(--gold);
+  opacity: .55;
+}
+
+.social-promo__title {
+  margin: 0 0 20px;
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  font-weight: 600;
+  font-style: italic;
+  letter-spacing: .01em;
+  color: var(--dark);
+}
+
+.social-promo__links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.social-icon-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 22px;
+  border-radius: 999px;
+  border: 1.5px solid rgba(28,26,22,.22);
+  background: transparent;
+  color: var(--dark);
+  text-decoration: none;
+  font-size: .88rem;
+  font-weight: 600;
+  letter-spacing: .01em;
+  transition: background var(--transition), border-color var(--transition), color var(--transition), transform var(--transition);
+}
+
+.social-icon-link svg {
+  width: 17px;
+  height: 17px;
+  fill: currentColor;
+  flex-shrink: 0;
+}
+
+.social-icon-link:hover {
+  background: var(--dark);
+  border-color: var(--dark);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
 @media (max-width: 640px) {
   .card {
     padding: 24px 20px;
+  }
+
+  .social-promo {
+    padding: 26px 20px;
+  }
+
+  .social-promo__links {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .social-icon-link {
+    justify-content: center;
   }
 
   .booking-modal__dialog {
@@ -562,51 +641,96 @@ h1 {
   margin-bottom: 28px;
 }
 
+.massage-page .massage-types-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
 .massage-page .massage-item {
-  background: transparent;
-  border: 0;
-  border-bottom: 1px solid rgba(28,26,22,.08);
-  border-radius: 0;
-  padding: 24px 0;
-  margin-bottom: 0;
+  position: relative;
+  background: var(--white);
+  border-radius: 18px;
+  padding: 30px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  overflow: hidden;
+  border: none;
+  box-shadow: 0 2px 20px rgba(28,26,22,.07);
+  transition: transform var(--transition), box-shadow var(--transition);
 }
 
-.massage-page .massage-item:first-of-type {
-  padding-top: 0;
+/* Gold accent stripe at top */
+.massage-page .massage-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--gold), var(--gold-2));
 }
 
-.massage-page .massage-item:last-child {
-  border-bottom: 0;
-  padding-bottom: 0;
+/* Numbered watermark */
+.massage-page .massage-types-grid .massage-item:nth-child(1)::after { content: '01'; }
+.massage-page .massage-types-grid .massage-item:nth-child(2)::after { content: '02'; }
+.massage-page .massage-types-grid .massage-item:nth-child(3)::after { content: '03'; }
+.massage-page .massage-types-grid .massage-item:nth-child(4)::after { content: '04'; }
+.massage-page .massage-types-grid .massage-item:nth-child(5)::after { content: '05'; }
+
+.massage-page .massage-item::after {
+  position: absolute;
+  top: 14px;
+  right: 26px;
+  font-size: 4.4rem;
+  font-weight: 800;
+  color: rgba(201,168,76,.09);
+  line-height: 1;
+  font-family: var(--font-serif);
+  pointer-events: none;
+}
+
+.massage-page .massage-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 48px rgba(28,26,22,.13);
 }
 
 .massage-page .massage-item h3 {
   font-family: var(--font-serif);
-  font-size: clamp(1.1rem, 1.6vw, 1.32rem);
-  font-weight: 600;
+  font-size: clamp(1.15rem, 1.7vw, 1.38rem);
+  font-weight: 700;
   line-height: 1.22;
   letter-spacing: -.01em;
   color: var(--dark);
-  margin-bottom: 8px;
+  margin-bottom: 2px;
 }
 
 .massage-page .massage-desc {
   color: var(--text-light);
   font-size: .94rem;
   line-height: 1.62;
-  margin-bottom: 14px;
+  margin-bottom: 0;
 }
 
 .massage-page .massage-details {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 18px;
+  gap: 0;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #fbf8f2;
+  border: 1px solid rgba(168,137,48,.13);
 }
 
 .massage-page .massage-details > div {
+  padding: 14px 16px;
   background: transparent;
   border: 0;
-  padding: 0;
+}
+
+.massage-page .massage-details > div:first-child {
+  border-right: 1px solid rgba(168,137,48,.13);
 }
 
 .massage-page .massage-details h4 {
@@ -629,10 +753,41 @@ h1 {
   font-size: .90rem;
 }
 
+.massage-page .massage-item-actions {
+  margin-top: auto;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.massage-page .massage-item-actions .btn {
+  padding: 10px 20px;
+  font-size: .86rem;
+  border-radius: 999px;
+  font-weight: 600;
+}
+
+.massage-page .massage-item-actions .btn-outline {
+  border: 1px solid rgba(28,26,22,.22);
+  color: var(--dark);
+}
+
+.massage-page .massage-item-actions .btn-outline:hover {
+  border-color: var(--gold);
+  color: var(--gold-2);
+}
+
 /* CTA */
 .massage-page .cta-block {
   text-align: center;
   padding: 12px 0 0;
+}
+
+.massage-page .cta-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .massage-page .btn-gold.btn-lg {
@@ -668,7 +823,7 @@ h1 {
 }
 
 /* RESPONSIVE */
-@media (max-width: 900px) {
+@media (min-width: 641px) and (max-width: 900px) {
   .massage-page .intro-grid {
     grid-template-columns: 1fr;
   }
@@ -689,17 +844,47 @@ h1 {
     padding: 26px 24px;
   }
 
+  .massage-page .cta-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+
   .massage-page .card:hover {
     transform: none;
   }
 
+  .massage-page .intro-grid {
+    grid-template-columns: 1fr;
+  }
+
   .massage-page .massage-item {
-    padding: 20px 0;
+    padding: 22px 18px;
+    gap: 14px;
+  }
+
+  .massage-page .massage-item::after {
+    font-size: 3rem;
+    right: 16px;
+    top: 12px;
+  }
+
+  .massage-page .massage-types-grid {
+    grid-template-columns: 1fr;
   }
 
   .massage-page .massage-details {
     grid-template-columns: 1fr;
-    gap: 14px;
+    gap: 0;
+  }
+
+  .massage-page .massage-details > div:first-child {
+    border-right: none;
+    border-bottom: 1px solid rgba(168,137,48,.13);
+  }
+
+  .massage-page .massage-item-actions {
+    flex-direction: column;
+    align-items: stretch;
   }
 }
 
