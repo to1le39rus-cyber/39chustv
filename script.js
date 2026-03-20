@@ -154,6 +154,21 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  /* ---- КНОПКА НАВЕРХ ---- */
+  const btnTop = document.createElement('button');
+  btnTop.className = 'back-to-top';
+  btnTop.setAttribute('aria-label', 'Наверх');
+  btnTop.innerHTML = '<svg viewBox="0 0 24 24"><polyline points="18 15 12 9 6 15"/></svg>';
+  document.documentElement.appendChild(btnTop);
+
+  window.addEventListener('scroll', () => {
+    btnTop.classList.toggle('visible', window.scrollY > 300);
+  }, { passive: true });
+
+  btnTop.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
   /* ---- ПЛАВНЫЙ СКРОЛЛ ДЛЯ ЯКОРЕЙ ---- */
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
