@@ -24,9 +24,27 @@ document.addEventListener('DOMContentLoaded', () => {
     dropdownToggle.addEventListener('click', (event) => {
       if (!isMobileMenu()) return;
       event.preventDefault();
+      const wasExpanded = dropdownItem.classList.contains('is-expanded');
       dropdownItem.classList.toggle('is-expanded');
+      // При закрытии "Направления" — сбрасываем все группы
+      if (wasExpanded) {
+        nav.querySelectorAll('.nav__dropdown-group').forEach(g => g.classList.remove('is-open'));
+      }
     });
   }
+
+  // Аккордеон категорий (второй уровень)
+  nav.querySelectorAll('.nav__dropdown-title').forEach(title => {
+    title.addEventListener('click', () => {
+      if (!isMobileMenu()) return;
+      const group = title.closest('.nav__dropdown-group');
+      const wasOpen = group.classList.contains('is-open');
+      // Закрываем все группы (один открытый)
+      nav.querySelectorAll('.nav__dropdown-group').forEach(g => g.classList.remove('is-open'));
+      // Если эта была закрыта — открываем
+      if (!wasOpen) group.classList.add('is-open');
+    });
+  });
 
   burger.addEventListener('click', () => {
     const isOpen = nav.classList.toggle('open');
@@ -35,6 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.body.style.overflow = isOpen ? 'hidden' : '';
     if (!isOpen && dropdownItem) {
       dropdownItem.classList.remove('is-expanded');
+      nav.querySelectorAll('.nav__dropdown-group').forEach(g => g.classList.remove('is-open'));
     }
   });
   // Закрыть при клике на ссылку
@@ -46,6 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
       document.body.style.overflow = '';
       if (dropdownItem) {
         dropdownItem.classList.remove('is-expanded');
+        nav.querySelectorAll('.nav__dropdown-group').forEach(g => g.classList.remove('is-open'));
       }
     });
   });
