@@ -9,6 +9,7 @@
   --white: #FFFFFF;
   --radius: 16px;
   --shadow: 0 4px 40px rgba(28,26,22,.10);
+  --transition: .3s cubic-bezier(.4,0,.2,1);
   --font-serif: 'Playfair Display', Georgia, serif;
   --font-sans: 'Inter', system-ui, sans-serif;
 }
@@ -217,9 +218,130 @@ h1 {
   color: var(--dark);
 }
 
+/* ---- BOOKING MODAL (all services) ---- */
+.booking-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 3000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.booking-modal.is-open {
+  display: flex;
+}
+
+.booking-modal__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(20, 18, 14, .64);
+  backdrop-filter: blur(3px);
+}
+
+.booking-modal__dialog {
+  position: relative;
+  width: 100%;
+  max-width: 560px;
+  background: var(--white);
+  border-radius: 14px;
+  box-shadow: 0 24px 80px rgba(15, 14, 11, .35);
+  padding: 28px;
+}
+
+.booking-modal__close {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  width: 36px;
+  height: 36px;
+  border-radius: 999px;
+  border: 1px solid rgba(28, 26, 22, .18);
+  color: var(--dark);
+  background: var(--white);
+  font-size: 1.25rem;
+  line-height: 1;
+}
+
+.booking-modal__title {
+  font-family: var(--font-serif);
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  color: var(--dark);
+  margin-bottom: 6px;
+}
+
+.booking-modal__sub {
+  color: var(--text-light);
+  margin-bottom: 18px;
+}
+
+.booking-form {
+  display: grid;
+  gap: 12px;
+}
+
+.booking-form label {
+  font-size: .86rem;
+  font-weight: 600;
+  color: var(--dark);
+}
+
+.booking-form input,
+.booking-form textarea {
+  width: 100%;
+  margin-top: 6px;
+  border: 1px solid rgba(28, 26, 22, .15);
+  border-radius: 10px;
+  padding: 12px 14px;
+  font: inherit;
+  color: var(--text);
+  background: #fff;
+}
+
+.booking-form textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.booking-form input:focus,
+.booking-form textarea:focus {
+  outline: none;
+  border-color: rgba(168, 137, 48, .55);
+  box-shadow: 0 0 0 3px rgba(201, 168, 76, .16);
+}
+
+.booking-form__meta {
+  font-size: .78rem;
+  color: var(--text-light);
+}
+
+.booking-form__actions {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.booking-form__status {
+  font-size: .88rem;
+}
+
+.booking-form__status.is-ok {
+  color: #2a7c4f;
+}
+
+.booking-form__status.is-error {
+  color: #b94646;
+}
+
 @media (max-width: 640px) {
   .card {
     padding: 24px 20px;
+  }
+
+  .booking-modal__dialog {
+    padding: 22px 18px 18px;
   }
 
   .service-hero {

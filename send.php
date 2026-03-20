@@ -10,8 +10,8 @@
  * 3. Вставьте значения ниже
  */
 
-define('BOT_TOKEN', 'ВАШ_BOT_TOKEN_ЗДЕСЬ');   // ← замените
-define('CHAT_ID',   'ВАШ_CHAT_ID_ЗДЕСЬ');       // ← замените
+define('BOT_TOKEN', '8567630647:AAFbEusntuoW-6sfMaPOKd6ebH0RiugVQQc');   // ← замените
+define('CHAT_ID',   '429501361');       // ← замените
 
 /* --------------------------------------------------------- */
 
@@ -39,6 +39,8 @@ $name    = htmlspecialchars(trim($data['name']    ?? ''), ENT_QUOTES, 'UTF-8');
 $phone   = htmlspecialchars(trim($data['phone']   ?? ''), ENT_QUOTES, 'UTF-8');
 $service = htmlspecialchars(trim($data['service'] ?? ''), ENT_QUOTES, 'UTF-8');
 $message = htmlspecialchars(trim($data['message'] ?? ''), ENT_QUOTES, 'UTF-8');
+$sourceTitle = htmlspecialchars(trim($data['source_title'] ?? ''), ENT_QUOTES, 'UTF-8');
+$sourceUrl   = htmlspecialchars(trim($data['source_url'] ?? ''), ENT_QUOTES, 'UTF-8');
 
 // Базовая валидация
 if (mb_strlen($name, 'UTF-8') < 2 || mb_strlen($phone, 'UTF-8') < 5) {
@@ -54,6 +56,10 @@ $text .= "📱 *Телефон / Telegram:* {$phone}\n";
 
 if ($service) {
     $text .= "📌 *Направление:* {$service}\n";
+}
+if ($sourceTitle || $sourceUrl) {
+    $src = trim($sourceTitle . ($sourceUrl ? " ({$sourceUrl})" : ''));
+    $text .= "🧭 *Источник:* {$src}\n";
 }
 if ($message) {
     $text .= "💬 *Сообщение:*\n{$message}\n";
