@@ -108,6 +108,17 @@
     s.textContent = '.service-hero--with-img::before { background-image: url("' + img + '"); }';
     document.head.appendChild(s);
     hero.classList.add('service-hero--with-img');
+
+    /* Wrap hero inner content in hero-shell if not already there */
+    var container = hero.querySelector('.container');
+    if (container && !container.querySelector('.hero-shell')) {
+      var shell = document.createElement('div');
+      shell.className = 'hero-shell';
+      while (container.firstChild) {
+        shell.appendChild(container.firstChild);
+      }
+      container.appendChild(shell);
+    }
   }
 
   function addSocialPromoBlock() {
