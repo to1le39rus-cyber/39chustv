@@ -3,200 +3,283 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="39 ЧУВСТВО — Массаж. Восстановление через тело: классический, даосские веники, арома-массаж, ребозо, массаж огнём и программы заботы.">
+  <meta name="description" content="39 ЧУВСТВО — Массаж. Восстановление через тело: классический, даосские веники, арома-массаж, ребозо, массаж огнём.">
   <title>Массаж — 39 ЧУВСТВО</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/services/service.css">
 </head>
-<body>
+<body class="massage-page">
+
+  <header class="header" id="header">
+    <div class="header__inner">
+      <a href="/" class="logo">39 <span>ЧУВСТВО</span></a>
+      <nav class="nav" id="nav">
+        <div class="nav__item nav__item--dropdown">
+          <a href="/#directions" class="nav__link nav__link--dropdown-toggle">Направления <span class="nav__caret" aria-hidden="true">▾</span></a>
+          <div class="nav__dropdown" aria-label="Список услуг">
+            <div class="nav__dropdown-group">
+              <span class="nav__dropdown-title">Йога и практики</span>
+              <a href="/services/hatha-yoga">Хатха-йога</a>
+              <a href="/services/kundalini-yoga">Кундалини-йога</a>
+              <a href="/services/aerial-yoga">Йога в гамаках</a>
+              <a href="/services/qigong">Цигун</a>
+              <a href="/services/beloyar">Белояр</a>
+            </div>
+            <div class="nav__dropdown-group">
+              <span class="nav__dropdown-title">Телесная терапия</span>
+              <a href="/services/pravilo">ПравИло</a>
+              <a href="/services/massage">Массаж</a>
+              <a href="/services/nails">Практика на гвоздях</a>
+              <a href="/services/sound-therapy">Звукотерапия</a>
+            </div>
+            <div class="nav__dropdown-group">
+              <span class="nav__dropdown-title">Для двоих</span>
+              <a href="/services/couples-practice">Парные практики</a>
+              <a href="/services/39-shades-of-love">39 оттенков любви</a>
+              <a href="/services/date-in-studio">Свидание в студии</a>
+            </div>
+            <div class="nav__dropdown-group">
+              <span class="nav__dropdown-title">Комьюнити</span>
+              <a href="/services/mens-circle">Мужские круги</a>
+              <a href="/services/womens-circle">Женские круги</a>
+              <a href="/services/longevity-club">Клуб долголетия</a>
+              <a href="/services/events">Концерты и события</a>
+            </div>
+          </div>
+        </div>
+        <a href="/services/pravilo" class="nav__link">Правило</a>
+        <a href="/#founders" class="nav__link">О нас</a>
+        <a href="/#packages" class="nav__link">Пакеты</a>
+        <a href="/#contact" class="nav__link nav__link--cta">Записаться</a>
+      </nav>
+      <button class="burger" id="burger" aria-label="Меню">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
 
   <!-- HERO -->
-  <section class="service-hero">
+  <section class="service-hero service-hero--massage">
     <div class="container">
-      <a class="breadcrumb" href="/">← Назад на главную</a>
-      <h1>Массаж</h1>
-      <p class="hero-sub">Способ переключить состояние, снять накопленное напряжение и вернуть ощущение опоры внутри</p>
+      <div class="hero-shell">
+        <a class="breadcrumb" href="/">← Назад на главную</a>
+        <p class="hero-eyebrow">39 Чувство · Телесные практики</p>
+        <h1>Массаж</h1>
+        <p class="hero-sub">Способ переключить состояние, снять накопленное напряжение и вернуть ощущение опоры внутри</p>
+      </div>
     </div>
   </section>
 
-  <!-- ОСНОВНОЕ ОПИСАНИЕ -->
+  <!-- КОНТЕНТ -->
   <section class="service-content">
     <div class="container">
       
-      <article class="card">
-        <h2>Что такое массаж в «39 Чувство»</h2>
-        <p>Массаж в «39 Чувство» — это не просто техника работы с телом. Это способ переключить состояние, снять накопленное напряжение и вернуть ощущение опоры внутри.</p>
-        <p style="margin-top: 16px;">Мы работаем не только с мышцами, но и с:</p>
-        <ul style="margin: 16px 0; padding-left: 24px;">
-          <li>нервной системой</li>
-          <li>внутренним напряжением</li>
-          <li>усталостью и перегрузом</li>
-        </ul>
-      </article>
+      <div class="intro-grid">
+        <!-- ОПИСАНИЕ -->
+        <article class="card card--intro" data-reveal>
+          <h2>Что такое массаж</h2>
+          <p>Массаж в «39 Чувство» — это не просто техника работы с телом. Это способ переключить состояние, снять накопленное напряжение и вернуть ощущение опоры внутри.</p>
+          <p>Мы работаем не только с мышцами, но и с:</p>
+          <ul class="bullet-list">
+            <li>нервной системой</li>
+            <li>внутренним напряжением</li>
+            <li>усталостью и перегрузом</li>
+          </ul>
+        </article>
 
-      <!-- РЕЗУЛЬТАТЫ -->
-      <article class="card">
-        <h2>После сессии вы чувствуете</h2>
-        <div style="display: grid; gap: 16px;">
-          <div style="display: flex; gap: 12px; align-items: flex-start;">
-            <span style="color: var(--gold); font-weight: 600;">✔</span>
-            <span>лёгкость в теле</span>
-          </div>
-          <div style="display: flex; gap: 12px; align-items: flex-start;">
-            <span style="color: var(--gold); font-weight: 600;">✔</span>
-            <span>спокойствие в голове</span>
-          </div>
-          <div style="display: flex; gap: 12px; align-items: flex-start;">
-            <span style="color: var(--gold); font-weight: 600;">✔</span>
-            <span>больше контакта с собой</span>
-          </div>
-        </div>
-      </article>
+        <!-- РЕЗУЛЬТАТЫ -->
+        <article class="card card--results" data-reveal data-delay="1">
+          <h2>После сессии вы чувствуете</h2>
+          <ul class="check-list">
+            <li>лёгкость в теле</li>
+            <li>спокойствие в голове</li>
+            <li>больше контакта с собой</li>
+          </ul>
+        </article>
+      </div>
 
       <!-- ВИДЫ МАССАЖА -->
-      <article class="card">
-        <h2 style="margin-bottom: 32px;">🌿 Виды массажа</h2>
+      <article class="card massage-types" data-reveal>
+        <h2>Виды массажа</h2>
 
-        <div style="margin-bottom: 36px; padding-bottom: 24px; border-bottom: 1px solid var(--cream-2);">
-          <h3 style="color: var(--gold); margin-bottom: 8px;">Оздоровительный массаж</h3>
-          <p style="color: var(--text-light); margin-bottom: 16px;">Классическая проработка тела.</p>
-          
-          <p style="font-weight: 500; margin-bottom: 8px;">Подходит, если:</p>
-          <ul style="margin: 8px 0 16px 24px; color: var(--text-light);">
-            <li>есть зажимы и напряжение</li>
-            <li>болит спина или шея</li>
-            <li>хочется «привести тело в порядок»</li>
-          </ul>
-          
-          <p style="font-weight: 500; margin-bottom: 8px;">Результат:</p>
-          <ul style="margin: 0; padding-left: 24px;">
-            <li>✔️ снятие мышечного напряжения</li>
-            <li>✔️ улучшение самочувствия</li>
-            <li>✔️ восстановление тонуса</li>
-          </ul>
+        <div class="massage-item" data-reveal data-delay="1">
+          <h3>Оздоровительный массаж</h3>
+          <p class="massage-desc">Классическая проработка тела.</p>
+          <div class="massage-details">
+            <div>
+              <h4>Подходит, если:</h4>
+              <ul class="bullet-list">
+                <li>есть зажимы и напряжение</li>
+                <li>болит спина или шея</li>
+                <li>хочется «привести тело в порядок»</li>
+              </ul>
+            </div>
+            <div>
+              <h4>Результат:</h4>
+              <ul class="check-list">
+                <li>снятие мышечного напряжения</li>
+                <li>улучшение самочувствия</li>
+                <li>восстановление тонуса</li>
+              </ul>
+            </div>
+          </div>
         </div>
 
-        <div style="margin-bottom: 36px; padding-bottom: 24px; border-bottom: 1px solid var(--cream-2);">
-          <h3 style="color: var(--gold); margin-bottom: 8px;">Массаж даосскими вениками</h3>
-          <p style="color: var(--text-light); margin-bottom: 16px;">Глубокая телесная практика через тепло, ритм и вибрации.</p>
-          
-          <p style="font-weight: 500; margin-bottom: 8px;">Подходит, если:</p>
-          <ul style="margin: 8px 0 16px 24px; color: var(--text-light);">
-            <li>есть усталость и «перегруз»</li>
-            <li>хочется сильной перезагрузки</li>
-            <li>важно почувствовать тело</li>
-          </ul>
-          
-          <p style="font-weight: 500; margin-bottom: 8px;">Результат:</p>
-          <ul style="margin: 0; padding-left: 24px;">
-            <li>✔️ мощное расслабление</li>
-            <li>✔️ ощущение «перезапуска»</li>
-            <li>✔️ лёгкость и тепло в теле</li>
-          </ul>
+        <div class="massage-item" data-reveal data-delay="2">
+          <h3>Массаж даосскими вениками</h3>
+          <p class="massage-desc">Глубокая телесная практика через тепло, ритм и вибрации.</p>
+          <div class="massage-details">
+            <div>
+              <h4>Подходит, если:</h4>
+              <ul class="bullet-list">
+                <li>есть усталость и «перегруз»</li>
+                <li>хочется сильной перезагрузки</li>
+                <li>важно почувствовать тело</li>
+              </ul>
+            </div>
+            <div>
+              <h4>Результат:</h4>
+              <ul class="check-list">
+                <li>мощное расслабление</li>
+                <li>ощущение «перезапуска»</li>
+                <li>лёгкость и тепло в теле</li>
+              </ul>
+            </div>
+          </div>
         </div>
 
-        <div style="margin-bottom: 36px; padding-bottom: 24px; border-bottom: 1px solid var(--cream-2);">
-          <h3 style="color: var(--gold); margin-bottom: 8px;">Арома-массаж</h3>
-          <p style="color: var(--text-light); margin-bottom: 16px;">Мягкая расслабляющая практика с использованием эфирных масел.</p>
-          
-          <p style="font-weight: 500; margin-bottom: 8px;">Подходит, если:</p>
-          <ul style="margin: 8px 0 16px 24px; color: var(--text-light);">
-            <li>есть тревожность</li>
-            <li>сложно расслабиться</li>
-            <li>хочется бережного формата</li>
-          </ul>
-          
-          <p style="font-weight: 500; margin-bottom: 8px;">Результат:</p>
-          <ul style="margin: 0; padding-left: 24px;">
-            <li>✔️ успокоение нервной системы</li>
-            <li>✔️ глубокое расслабление</li>
-            <li>✔️ восстановление ресурса</li>
-          </ul>
+        <div class="massage-item" data-reveal data-delay="3">
+          <h3>Арома-массаж</h3>
+          <p class="massage-desc">Мягкая расслабляющая практика с эфирными маслами.</p>
+          <div class="massage-details">
+            <div>
+              <h4>Подходит, если:</h4>
+              <ul class="bullet-list">
+                <li>есть тревожность</li>
+                <li>сложно расслабиться</li>
+                <li>хочется бережного формата</li>
+              </ul>
+            </div>
+            <div>
+              <h4>Результат:</h4>
+              <ul class="check-list">
+                <li>успокоение нервной системы</li>
+                <li>глубокое расслабление</li>
+                <li>восстановление ресурса</li>
+              </ul>
+            </div>
+          </div>
         </div>
 
-        <div style="margin-bottom: 36px; padding-bottom: 24px; border-bottom: 1px solid var(--cream-2);">
-          <h3 style="color: var(--gold); margin-bottom: 8px;">Ребозо массаж</h3>
-          <p style="color: var(--text-light); margin-bottom: 16px;">Работа через мягкое покачивание в тканях.</p>
-          
-          <p style="font-weight: 500; margin-bottom: 8px;">Подходит, если:</p>
-          <ul style="margin: 8px 0 16px 24px; color: var(--text-light);">
-            <li>не хватает чувства безопасности</li>
-            <li>есть внутреннее напряжение</li>
-            <li>хочется «замедлиться»</li>
-          </ul>
-          
-          <p style="font-weight: 500; margin-bottom: 8px;">Результат:</p>
-          <ul style="margin: 0; padding-left: 24px;">
-            <li>✔️ глубокое расслабление</li>
-            <li>✔️ ощущение опоры и доверия</li>
-            <li>✔️ восстановление контакта с телом</li>
-          </ul>
+        <div class="massage-item" data-reveal data-delay="1">
+          <h3>Ребозо массаж</h3>
+          <p class="massage-desc">Работа через мягкое покачивание в тканях.</p>
+          <div class="massage-details">
+            <div>
+              <h4>Подходит, если:</h4>
+              <ul class="bullet-list">
+                <li>не хватает чувства безопасности</li>
+                <li>есть внутреннее напряжение</li>
+                <li>хочется «замедлиться»</li>
+              </ul>
+            </div>
+            <div>
+              <h4>Результат:</h4>
+              <ul class="check-list">
+                <li>глубокое расслабление</li>
+                <li>ощущение опоры и доверия</li>
+                <li>восстановление контакта с телом</li>
+              </ul>
+            </div>
+          </div>
         </div>
 
-        <div style="padding-bottom: 0;">
-          <h3 style="color: var(--gold); margin-bottom: 8px;">Массаж огнём</h3>
-          <p style="color: var(--text-light); margin-bottom: 16px;">Прогрев тела с использованием огня.</p>
-          
-          <p style="font-weight: 500; margin-bottom: 8px;">Подходит, если:</p>
-          <ul style="margin: 8px 0 16px 24px; color: var(--text-light);">
-            <li>есть зажимы и холод в теле</li>
-            <li>хочется активизации и энергии</li>
-          </ul>
-          
-          <p style="font-weight: 500; margin-bottom: 8px;">Результат:</p>
-          <ul style="margin: 0; padding-left: 24px;">
-            <li>✔️ снятие блоков</li>
-            <li>✔️ улучшение кровообращения</li>
-            <li>✔️ ощущение тепла и силы</li>
-          </ul>
+        <div class="massage-item" data-reveal data-delay="2">
+          <h3>Массаж огнём</h3>
+          <p class="massage-desc">Прогрев тела с использованием огня.</p>
+          <div class="massage-details">
+            <div>
+              <h4>Подходит, если:</h4>
+              <ul class="bullet-list">
+                <li>есть зажимы и холод в теле</li>
+                <li>хочется активизации и энергии</li>
+              </ul>
+            </div>
+            <div>
+              <h4>Результат:</h4>
+              <ul class="check-list">
+                <li>снятие блоков</li>
+                <li>улучшение кровообращения</li>
+                <li>ощущение тепла и силы</li>
+              </ul>
+            </div>
+          </div>
         </div>
       </article>
 
       <!-- ПРОГРАММЫ ЗАБОТЫ -->
-      <article class="card">
-        <h2 style="margin-bottom: 24px;">💛 Программы заботы</h2>
-        <p style="font-weight: 500; margin-bottom: 12px;">Это не просто массаж.</p>
+      <article class="card" data-reveal>
+        <h2>Программы заботы</h2>
+        <p><strong>Это не просто массаж.</strong></p>
         <p>Это цельная сессия восстановления, где сочетаются разные техники:</p>
-        <ul style="margin: 16px 0; padding-left: 24px;">
+        <ul class="bullet-list">
           <li>массаж</li>
           <li>телесные практики</li>
           <li>работа с состоянием</li>
           <li>внимание к вашему запросу</li>
         </ul>
         
-        <p style="margin-top: 20px; margin-bottom: 8px;">Формат подбирается под вас:</p>
-        <ul style="margin: 8px 0 24px 24px;">
-          <li>✔️ индивидуально</li>
-          <li>✔️ для пары</li>
+        <p class="mt-32">Формат подбирается под вас:</p>
+        <ul class="check-list">
+          <li>индивидуально</li>
+          <li>для пары</li>
         </ul>
 
-        <p style="font-weight: 500; margin-bottom: 8px;">Подходит, если:</p>
-        <ul style="margin: 8px 0 16px 24px; color: var(--text-light);">
+        <p class="mt-32"><strong>Подходит, если:</strong></p>
+        <ul class="bullet-list">
           <li>вы устали и «на пределе»</li>
           <li>хочется глубоко восстановиться</li>
           <li>нужно не просто расслабление, а перезагрузка</li>
         </ul>
 
-        <p style="font-weight: 500; margin-bottom: 8px;">Результат:</p>
-        <ul style="margin: 0; padding-left: 24px;">
-          <li>✔️ восстановление ресурса</li>
-          <li>✔️ ощущение «я снова в себе»</li>
-          <li>✔️ глубокий отдых на уровне тела и психики</li>
+        <p class="mt-32"><strong>Результат:</strong></p>
+        <ul class="check-list">
+          <li>восстановление ресурса</li>
+          <li>ощущение «я снова в себе»</li>
+          <li>глубокий отдых на уровне тела и психики</li>
         </ul>
       </article>
 
       <!-- CTA -->
-      <div style="margin-top: 48px; text-align: center;">
-        <a class="btn btn-gold" href="/#contact" style="font-size: 1rem; padding: 16px 44px;">Оставить заявку</a>
-        <p style="margin-top: 24px; color: var(--text-light);">
-          <a href="/" style="color: var(--gold); text-decoration: underline;">← Вернуться на главную</a>
-        </p>
+      <div class="cta-block" data-reveal>
+        <a class="btn btn-gold btn-lg" href="/#contact">Оставить заявку</a>
+        <p class="cta-link"><a href="/">← Вернуться на главную</a></p>
       </div>
 
     </div>
   </section>
 
+
+  <script src="/script.js"></script>
+  <script>
+    /* Scroll-reveal via IntersectionObserver */
+    (function () {
+      var obs = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) {
+            e.target.classList.add('is-visible');
+            obs.unobserve(e.target);
+          }
+        });
+      }, { threshold: 0.10 });
+
+      document.querySelectorAll('[data-reveal]').forEach(function (el) {
+        obs.observe(el);
+      });
+    })();
+  </script>
 </body>
 </html>
