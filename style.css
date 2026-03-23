@@ -580,6 +580,16 @@ input, select, textarea { font: inherit; }
   color: var(--gold);
   letter-spacing: .02em;
 }
+.service-card--main .service-card__links {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.service-card--main .service-card__link-sep {
+  color: rgba(201,168,76,.72);
+  font-size: .82rem;
+  line-height: 1;
+}
 .service-card--main .service-card__link:hover { color: #e8c96a; }
 .service-card__body {
   padding: 24px 28px 28px;

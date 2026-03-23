@@ -121,33 +121,10 @@
     }
   }
 
-  function addSocialPromoBlock() {
-    if (document.querySelector('.social-promo')) {
-      return;
-    }
-
-    var container = document.querySelector('.service-content .container');
-    if (!container) {
-      return;
-    }
-
-    var promo = document.createElement('section');
-    promo.className = 'social-promo';
-    promo.innerHTML =
-      '<svg class="social-promo__ornament" width="32" height="8" viewBox="0 0 32 8" aria-hidden="true"><circle cx="4" cy="4" r="3" fill="currentColor"/><circle cx="16" cy="4" r="3" fill="currentColor"/><circle cx="28" cy="4" r="3" fill="currentColor"/></svg>' +
-      '<p class="social-promo__title">Мы в соцсетях</p>' +
-      '<div class="social-promo__links">' +
-        '<a class="social-icon-link" href="https://vk.com/39chuvstvo" target="_blank" rel="noopener noreferrer" aria-label="Перейти в ВКонтакте">' +
-          '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 7.1c.16 7.7 4.01 12.34 10.76 12.34h.38v-4.4c2.48.24 4.35 2.04 5.1 4.4H23c-.95-3.47-3.46-5.4-5.03-6.14 1.57-.9 3.76-3.11 4.29-6.2h-3.42c-.7 2.5-2.71 4.72-4.7 4.94V7.1h-3.42v8.65c-2.01-.5-4.55-2.9-4.66-8.65H3z"/></svg>' +
-          '<span>ВКонтакте</span>' +
-        '</a>' +
-        '<a class="social-icon-link" href="https://t.me/masterskaya39chuvstvo" target="_blank" rel="noopener noreferrer" aria-label="Перейти в Telegram">' +
-          '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M9.78 14.64l-.4 5.61c.57 0 .82-.24 1.11-.53l2.67-2.53 5.54 4.05c1.02.56 1.74.27 2-.95L23.95 5.2c.35-1.5-.54-2.08-1.54-1.7L2.6 11.12c-1.35.53-1.33 1.28-.23 1.62l5.07 1.58L19.2 6.8c.56-.35 1.07-.16.65.2"/></svg>' +
-          '<span>Telegram</span>' +
-        '</a>' +
-      '</div>';
-
-    container.appendChild(promo);
+  function removeSocialPromoBlock() {
+    document.querySelectorAll('.social-promo').forEach(function (el) {
+      el.remove();
+    });
   }
 
   function buildModal() {
@@ -209,7 +186,7 @@
     setPageBodyClass();
     addSiteHeader();
     setHeroImage();
-    addSocialPromoBlock();
+    removeSocialPromoBlock();
     addBackToTop();
 
     var modal = buildModal();

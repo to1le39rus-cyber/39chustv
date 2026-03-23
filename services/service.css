@@ -301,6 +301,48 @@ h1 {
   flex-wrap: wrap;
 }
 
+.hero-actions {
+  margin-top: 26px;
+}
+
+.hero-actions .btn-outline {
+  border-color: rgba(255,255,255,.72);
+  color: var(--white);
+}
+
+.hero-actions .btn-outline:hover {
+  background: rgba(255,255,255,.08);
+  border-color: rgba(255,255,255,.92);
+}
+
+.split-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.result-compare {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 12px;
+}
+
+.result-compare__card {
+  background: #fbf8f2;
+  border: 1px solid #efe4ca;
+  border-radius: 14px;
+  padding: 20px;
+}
+
+.result-compare__card h3 {
+  font-family: var(--font-serif);
+  font-size: 1.3rem;
+  line-height: 1.2;
+  margin-bottom: 14px;
+  color: var(--dark);
+}
+
 .btn {
   display: inline-flex;
   align-items: center;
@@ -513,6 +555,11 @@ h1 {
     padding: 24px 20px;
   }
 
+  .split-grid,
+  .result-compare {
+    grid-template-columns: 1fr;
+  }
+
   .social-promo {
     padding: 26px 20px;
   }
@@ -579,6 +626,11 @@ h1 {
   background: url('/img/mass.webp') center 38% / cover no-repeat;
   filter: blur(8px);
   transform: scale(1.05);
+}
+
+/* Pravilo uses the same hero template as massage, but with its own image */
+.pravilo-page .service-hero--massage::before {
+  background: url('/img/pravilo.webp') center 35% / cover no-repeat;
 }
 
 .massage-page .service-hero--massage::after {
