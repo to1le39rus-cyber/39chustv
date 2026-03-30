@@ -1151,12 +1151,30 @@ h1 {
   background: #ece3d5;
 }
 
+.trainer-card__image-wrap::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(145deg, rgba(28,26,22,.35) 0%, rgba(201,168,76,.15) 100%);
+  pointer-events: none;
+  transition: opacity var(--transition);
+}
+
+.trainer-card:hover .trainer-card__image-wrap::after {
+  opacity: 0;
+}
+
 .trainer-card__image {
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: var(--trainer-photo-position);
   display: block;
+  transition: transform var(--transition);
+}
+
+.trainer-card:hover .trainer-card__image {
+  transform: scale(1.03);
 }
 
 .trainer-card__number {
@@ -1231,6 +1249,11 @@ h1 {
   color: var(--dark);
 }
 
+.trainer-card__buttons {
+  display: flex;
+  gap: 12px;
+}
+
 .trainer-card__toggle {
   display: inline-flex;
   align-items: center;
@@ -1238,13 +1261,21 @@ h1 {
   flex: 1;
   padding: 12px 18px;
   border-radius: 999px;
-  background: var(--trainer-accent);
-  color: #fff;
+  background: transparent;
+  color: var(--gold);
+  border: 1px solid var(--gold);
   font-size: .92rem;
   font-weight: 600;
-  transition: transform var(--transition), opacity var(--transition);
+  transition: all var(--transition);
   cursor: pointer;
-  border: none;
+  text-decoration: none;
+}
+
+.trainer-card__toggle:hover {
+  background: var(--gold);
+  color: var(--white);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 32px rgba(201,168,76,.25);
 }
 
 .trainer-card__book {
@@ -1254,22 +1285,27 @@ h1 {
   flex: 1;
   padding: 12px 18px;
   border-radius: 999px;
-  background: rgba(28,26,22,.08);
-  color: var(--dark);
+  background: var(--gold);
+  border: 1px solid var(--gold);
+  color: var(--white);
   font-size: .92rem;
   font-weight: 600;
-  transition: transform var(--transition), background var(--transition);
+  transition: all var(--transition);
   cursor: pointer;
-  border: none;
   text-decoration: none;
 }
 
 .trainer-card__book:hover {
-  background: rgba(28,26,22,.12);
+  background: var(--gold-2);
+  border-color: var(--gold-2);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 32px rgba(201,168,76,.35);
 }
 
 .trainer-card[open] .trainer-card__toggle {
   opacity: .92;
+  background: var(--gold);
+  color: var(--white);
 }
 
 .trainer-card__details {
@@ -1340,17 +1376,20 @@ h1 {
   display: inline-block;
   padding: 12px 28px;
   border-radius: 999px;
-  background: var(--trainer-accent);
-  color: #fff;
+  background: var(--gold);
+  border: 1px solid var(--gold);
+  color: var(--white);
   text-decoration: none;
   font-size: .92rem;
   font-weight: 600;
-  transition: transform var(--transition), opacity var(--transition);
+  transition: all var(--transition);
 }
 
 .trainer-card__book-section a:hover {
+  background: var(--gold-2);
+  border-color: var(--gold-2);
   transform: translateY(-2px);
-  opacity: .92;
+  box-shadow: 0 8px 32px rgba(201,168,76,.35);
 }
 
 .trainers-page .contact-section {
