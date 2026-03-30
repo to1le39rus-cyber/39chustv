@@ -61,7 +61,8 @@
         </div>
         <a href="/#pravilo" class="nav__link">Правило</a>
         <a href="/services/trainers" class="nav__link">Тренеры</a>
-        <a href="/#contact" class="nav__link nav__link--cta">Записаться</a>
+          <a href="/#founders" class="nav__link">О нас</a>
+          <a href="#contact" class="nav__link nav__link--cta">Записаться</a>
       </nav>
       <button class="burger" id="burger" aria-label="Меню">
         <span></span><span></span><span></span>
@@ -76,7 +77,6 @@
         <a class="breadcrumb" href="/">← Назад на главную</a>
         <p class="hero-eyebrow">39 Чувство</p>
         <h1>Наши тренеры</h1>
-        <p class="hero-sub">Четыре разных подхода к телу и состоянию: от глубокой телесной работы и йоги до звука, энергии и системного восстановления.</p>
         <div class="trainers-hero__meta">
           <span>Телесные практики</span>
           <span>Йога и звук</span>
@@ -90,14 +90,9 @@
   <!-- ТРЕНЕРЫ -->
   <section class="trainers-container">
     <div class="container">
-      <div class="trainers-intro">
-        <span class="section-tag">Выберите своего специалиста</span>
-        <h2 class="section-title">Четыре подхода, четыре характера работы</h2>
-        <p class="section-sub">На первом экране только главное: кто этот человек, с чем он работает и какой результат вы можете получить. Если откликается, раскрывайте карточку и смотрите детали.</p>
-      </div>
 
       <div class="trainers-grid">
-        <details class="trainer-card trainer-card--earth" id="ilya">
+        <details class="trainer-card trainer-card--earth" id="ilya" style="--trainer-photo-position: 50% 95%;">
           <summary class="trainer-card__summary">
             <div class="trainer-card__image-wrap">
               <img class="trainer-card__image" src="/img/Ilya.webp" alt="Илья">
@@ -115,7 +110,7 @@
               </div>
               <div class="trainer-card__buttons">
                 <span class="trainer-card__toggle">Подробнее</span>
-                <a href="/#contact" class="trainer-card__book">Записаться</a>
+                <a href="#0" data-booking-open data-service-name="Тренер: Илья" class="trainer-card__book">Записаться</a>
               </div>
             </div>
           </summary>
@@ -154,12 +149,12 @@
               </section>
             </div>
             <div class="trainer-card__book-section">
-              <a href="/#contact">Записаться на сессию</a>
+              <a href="#0" data-booking-open data-service-name="Тренер: Илья">Записаться на сессию</a>
             </div>
           </div>
         </details>
 
-        <details class="trainer-card trainer-card--sand" id="zhenya">
+        <details class="trainer-card trainer-card--sand" id="zhenya" style="--trainer-photo-position: 50% 20%;">
           <summary class="trainer-card__summary">
             <div class="trainer-card__image-wrap">
               <img class="trainer-card__image" src="/img/Larionova.webp" alt="Евгения">
@@ -177,7 +172,7 @@
               </div>
               <div class="trainer-card__buttons">
                 <span class="trainer-card__toggle">Подробнее</span>
-                <a href="/#contact" class="trainer-card__book">Записаться</a>
+                <a href="#0" data-booking-open data-service-name="Тренер: Евгения" class="trainer-card__book">Записаться</a>
               </div>
             </div>
           </summary>
@@ -216,12 +211,12 @@
               </section>
             </div>
             <div class="trainer-card__book-section">
-              <a href="/#contact">Записаться на сессию</a>
+              <a href="#0" data-booking-open data-service-name="Тренер: Евгения">Записаться на сессию</a>
             </div>
           </div>
         </details>
 
-        <details class="trainer-card trainer-card--amber" id="anyuta">
+        <details class="trainer-card trainer-card--amber" id="anyuta" style="--trainer-photo-position: 50% 15%;">
           <summary class="trainer-card__summary">
             <div class="trainer-card__image-wrap">
               <img class="trainer-card__image" src="/img/tr-anyta.webp" alt="Анюта">
@@ -239,7 +234,7 @@
               </div>
               <div class="trainer-card__buttons">
                 <span class="trainer-card__toggle">Подробнее</span>
-                <a href="/#contact" class="trainer-card__book">Записаться</a>
+                <a href="#0" data-booking-open data-service-name="Тренер: Анюта" class="trainer-card__book">Записаться</a>
               </div>
             </div>
           </summary>
@@ -273,12 +268,12 @@
               </section>
             </div>
             <div class="trainer-card__book-section">
-              <a href="/#contact">Записаться на сессию</a>
+              <a href="#0" data-booking-open data-service-name="Тренер: Анюта">Записаться на сессию</a>
             </div>
           </div>
         </details>
 
-        <details class="trainer-card trainer-card--sage" id="anatoliy">
+        <details class="trainer-card trainer-card--sage" id="anatoliy" style="--trainer-photo-position: 50% 10%;">
           <summary class="trainer-card__summary">
             <div class="trainer-card__image-wrap">
               <img class="trainer-card__image" src="/img/tr-anatoliy.webp" alt="Анатолий">
@@ -296,7 +291,7 @@
               </div>
               <div class="trainer-card__buttons">
                 <span class="trainer-card__toggle">Подробнее</span>
-                <a href="/#contact" class="trainer-card__book">Записаться</a>
+                <a href="#0" data-booking-open data-service-name="Тренер: Анатолий" class="trainer-card__book">Записаться</a>
               </div>
             </div>
           </summary>
@@ -330,7 +325,7 @@
               </section>
             </div>
             <div class="trainer-card__book-section">
-              <a href="/#contact">Записаться на сессию</a>
+              <a href="#0" data-booking-open data-service-name="Тренер: Анатолий">Записаться на сессию</a>
             </div>
           </div>
         </details>
@@ -339,22 +334,85 @@
     </div>
   </section>
 
-  <!-- КОНТАКТ -->
-  <section class="contact-section" id="contact">
+  <!-- ФОРМА ЗАПИСИ -->
+  <section class="contact" id="contact">
     <div class="container">
-      <h2>Записаться на практику</h2>
-      <p class="contact-subtitle">Выберите подходящего тренера и запишитесь на сессию</p>
-      
-      <div class="contact-links">
-        <a href="https://t.me/chustv39" target="_blank" rel="noopener noreferrer" class="contact-link">
-          <span>Telegram</span>
-        </a>
-        <a href="https://wa.me/79119999999" target="_blank" rel="noopener noreferrer" class="contact-link">
-          <span>WhatsApp</span>
-        </a>
-        <a href="tel:+79119999999" class="contact-link">
-          <span>Позвонить</span>
-        </a>
+      <div class="contact__inner">
+        <div class="contact__text">
+          <span class="section-tag section-tag--light">Первый шаг</span>
+          <h2 class="section-title section-title--light">Запишитесь<br>на&nbsp;бесплатную<br>консультацию</h2>
+          <p>Расскажем какой формат подходит именно вам. Ответим на все вопросы. Без давления и навязывания.</p>
+          <div class="contact__info">
+            <div class="contact__info-item">
+              <span>📍</span>
+              <span>г. Калининград, улица Олега Кошевого, 11</span>
+            </div>
+            <div class="contact__info-item">
+              <span>📍</span>
+              <span>г. Зеленоградск, Садовая улица, 32а</span>
+            </div>
+            <div class="contact__info-item">
+              <span>💬</span>
+              <a href="https://t.me/Jenny_Larionova" target="_blank" rel="noopener noreferrer">Написать в телеграм</a>
+            </div>
+            <div class="contact__info-item">
+              <span>📞</span>
+              <a href="tel:+79853432888">+7 985 343-28-88 — Илья</a>
+            </div>
+            <div class="contact__info-item">
+              <span>📞</span>
+              <a href="tel:+79051983999">+7 905 198-39-99 — Евгения</a>
+            </div>
+            <div class="contact__info-item">
+              <span>📞</span>
+              <a href="tel:+79804599898">+7 980 459-98-98 — общий номер</a>
+            </div>
+          </div>
+        </div>
+        <form class="contact__form" id="contactForm" novalidate>
+          <div class="form-group">
+            <label for="name">Ваше имя *</label>
+            <input type="text" id="name" name="name" placeholder="Как вас зовут?" required>
+            <span class="form-error" id="nameError"></span>
+          </div>
+          <div class="form-group">
+            <label for="phone">Телефон / Telegram *</label>
+            <input type="text" id="phone" name="phone" placeholder="+7 999 000-00-00 или @username" required>
+            <span class="form-error" id="phoneError"></span>
+          </div>
+          <div class="form-group">
+            <label for="service">Что интересует?</label>
+            <select id="service" name="service">
+              <option value="">Выберите направление</option>
+              <option value="Тренажёр Правило">Тренажёр Правило</option>
+              <option value="Хатха-йога">Хатха-йога</option>
+              <option value="Кундалини-йога">Кундалини-йога</option>
+              <option value="Йога в гамаках">Йога в гамаках</option>
+              <option value="Цигун">Цигун</option>
+              <option value="Массаж">Массаж</option>
+              <option value="Практика на гвоздях">Практика на гвоздях</option>
+              <option value="Звукотерапия">Звукотерапия</option>
+              <option value="Парные практики">Парные практики</option>
+              <option value="Стартовый пакет 30 дней">Стартовый пакет 30 дней</option>
+              <option value="VIP-практика">VIP-практика</option>
+              <option value="Другое">Другое / Не знаю</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Ваш запрос или вопрос</label>
+            <textarea id="message" name="message" rows="3" placeholder="Расскажите коротко, что беспокоит или что хотите получить..."></textarea>
+          </div>
+          <button type="submit" class="btn btn--gold btn--full" id="submitBtn">
+            <span class="btn-text">Отправить заявку</span>
+            <span class="btn-loader hidden">Отправляем...</span>
+          </button>
+          <p class="form-note">Нажимая кнопку, вы соглашаетесь с <a href="#">политикой конфиденциальности</a></p>
+          <div class="form-success hidden" id="formSuccess">
+            <div class="form-success__icon">✓</div>
+            <h3>Заявка отправлена!</h3>
+            <p>Мы свяжемся с вами в течение 15 минут в рабочее время.</p>
+          </div>
+        </form>
       </div>
     </div>
   </section>
@@ -368,7 +426,7 @@
             <li><a href="/">Главная</a></li>
             <li><a href="/services/trainers">Тренеры</a></li>
             <li><a href="/#directions">Услуги</a></li>
-            <li><a href="/#contact">Контакты</a></li>
+            <li><a href="#contact">Контакты</a></li>
           </ul>
         </nav>
         <div class="footer__col">
@@ -390,5 +448,6 @@
   </footer>
 
   <script src="/script.js"></script>
+  <script src="/services/service-booking.js"></script>
 </body>
 </html>

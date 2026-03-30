@@ -1,7 +1,7 @@
 (function () {
 
   /* === ШАПКА САЙТА === */
-  function addSiteHeader() {
+    function addSiteHeader() {
     if (document.querySelector('.header')) return;
     var h = document.createElement('header');
     h.className = 'header';
@@ -14,39 +14,47 @@
             '<a href="/#directions" class="nav__link nav__link--dropdown-toggle">Направления <span class="nav__caret" aria-hidden="true">▾</span></a>' +
             '<div class="nav__dropdown" aria-label="Список услуг">' +
               '<div class="nav__dropdown-group">' +
-                '<span class="nav__dropdown-title">Йога и практики</span>' +
-                '<a href="/services/hatha-yoga">Хатха-йога</a>' +
-                '<a href="/services/kundalini-yoga">Кундалини-йога</a>' +
-                '<a href="/services/aerial-yoga">Йога в гамаках</a>' +
-                '<a href="/services/qigong">Цигун</a>' +
-                '<a href="/services/beloyar">Белояр</a>' +
+                '<button class="nav__dropdown-title">Йога и практики <span class="nav__group-caret">▾</span></button>' +
+                '<div class="nav__dropdown-group-links">' +
+                  '<a href="/services/hatha-yoga">Хатха-йога</a>' +
+                  '<a href="/services/kundalini-yoga">Кундалини-йога</a>' +
+                  '<a href="/services/aerial-yoga">Йога в гамаках</a>' +
+                  '<a href="/services/qigong">Цигун</a>' +
+                  '<a href="/services/beloyar">Белояр</a>' +
+                '</div>' +
               '</div>' +
               '<div class="nav__dropdown-group">' +
-                '<span class="nav__dropdown-title">Телесная терапия</span>' +
-                '<a href="/services/pravilo">ПравИло</a>' +
-                '<a href="/services/massage">Массаж</a>' +
-                '<a href="/services/nails">Практика на гвоздях</a>' +
-                '<a href="/services/sound-therapy">Звукотерапия</a>' +
+                '<button class="nav__dropdown-title">Телесная терапия <span class="nav__group-caret">▾</span></button>' +
+                '<div class="nav__dropdown-group-links">' +
+                  '<a href="/services/pravilo">ПравИло</a>' +
+                  '<a href="/services/massage">Массаж</a>' +
+                  '<a href="/services/nails">Практика на гвоздях</a>' +
+                  '<a href="/services/sound-therapy">Звукотерапия</a>' +
+                '</div>' +
               '</div>' +
               '<div class="nav__dropdown-group">' +
-                '<span class="nav__dropdown-title">Для двоих</span>' +
-                '<a href="/services/couples-practice">Парные практики</a>' +
-                '<a href="/services/39-shades-of-love">39 оттенков любви</a>' +
-                '<a href="/services/date-in-studio">Свидание в студии</a>' +
+                '<button class="nav__dropdown-title">Для двоих <span class="nav__group-caret">▾</span></button>' +
+                '<div class="nav__dropdown-group-links">' +
+                  '<a href="/services/couples-practice">Парные практики</a>' +
+                  '<a href="/services/39-shades-of-love">39 оттенков любви</a>' +
+                  '<a href="/services/date-in-studio">Свидание в студии</a>' +
+                '</div>' +
               '</div>' +
               '<div class="nav__dropdown-group">' +
-                '<span class="nav__dropdown-title">Комьюнити</span>' +
-                '<a href="/services/mens-circle">Мужские круги</a>' +
-                '<a href="/services/womens-circle">Женские круги</a>' +
-                '<a href="/services/longevity-club">Клуб долголетия</a>' +
-                '<a href="/services/events">Концерты и события</a>' +
+                '<button class="nav__dropdown-title">Комьюнити <span class="nav__group-caret">▾</span></button>' +
+                '<div class="nav__dropdown-group-links">' +
+                  '<a href="/services/mens-circle">Мужские круги</a>' +
+                  '<a href="/services/womens-circle">Женские круги</a>' +
+                  '<a href="/services/longevity-club">Клуб долголетия</a>' +
+                  '<a href="/services/events">Концерты и события</a>' +
+                '</div>' +
               '</div>' +
             '</div>' +
           '</div>' +
-          '<a href="/services/pravilo" class="nav__link">Правило</a>' +
+          '<a href="/#pravilo" class="nav__link">ПравИло</a>' +
+          '<a href="/services/trainers" class="nav__link">Тренеры</a>' +
           '<a href="/#founders" class="nav__link">О нас</a>' +
-          '<a href="/#packages" class="nav__link">Пакеты</a>' +
-          '<a href="/#contact" class="nav__link nav__link--cta">Записаться</a>' +
+          '<a href="#0" data-booking-open class="nav__link nav__link--cta">Записаться</a>' +
         '</nav>' +
         '<button class="burger" id="burger" aria-label="Меню">' +
           '<span></span><span></span><span></span>' +
@@ -179,7 +187,7 @@
     if (a.hasAttribute('data-booking-open')) return true;
     var href = (a.getAttribute('href') || '').trim();
     if (!href) return false;
-    return href === '/#contact' || href === '#contact' || href.endsWith('/#contact');
+    return href === '/#contact' || (href === '#contact' && !document.getElementById('contact')) || href.endsWith('/#contact');
   }
 
   function setup() {
@@ -224,7 +232,7 @@
       var link = e.target.closest('a');
       if (isBookingLink(link)) {
         e.preventDefault();
-        openModal(getServiceTitle());
+        openModal(link.getAttribute("data-service-name") || getServiceTitle());
       }
     });
 
