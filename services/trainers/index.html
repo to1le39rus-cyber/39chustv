@@ -20,12 +20,16 @@
       <nav class="nav" id="nav">
         <div class="nav__item nav__item--dropdown">
           <a href="/#directions" class="nav__link nav__link--dropdown-toggle">Направления <span class="nav__caret" aria-hidden="true">▾</span></a>
-          <div class="nav__dropdown" aria-label="Список услуг" style="grid-template-columns: 1fr; min-width: 240px; padding: 1rem; display: flex; flex-direction: column; gap: 0.5rem;">
-              <a href="/services/yoga" class="nav__link">Йога</a>
-              <a href="/services/massage" class="nav__link">Массаж</a>
-              <a href="/services/pravilo" class="nav__link">ПравИло</a>
-              <a href="/services/sound-meditation" class="nav__link">Звуковые медитации</a>
-            </div>
+          <div class="nav__dropdown" aria-label="Список услуг">
+            <div class="nav__dropdown-group">
+              <button class="nav__dropdown-title">Йога и практики <span class="nav__group-caret">▾</span></button>
+              <div class="nav__dropdown-group-links">
+                <a href="/services/hatha-yoga">Хатха-йога</a>
+                <a href="/services/kundalini-yoga">Кундалини-йога</a>
+                <a href="/services/aerial-yoga">Йога в гамаках</a>
+                <a href="/services/qigong">Цигун</a>
+                <a href="/services/beloyar">Белояр</a>
+              </div>
             </div>
             <div class="nav__dropdown-group">
               <button class="nav__dropdown-title">Телесная терапия <span class="nav__group-caret">▾</span></button>
@@ -55,6 +59,7 @@
             </div>
           </div>
         </div>
+        <a href="/#pravilo" class="nav__link">Правило</a>
         <a href="/services/trainers" class="nav__link">Тренеры</a>
           <a href="/#founders" class="nav__link">О нас</a>
           <a href="#contact" class="nav__link nav__link--cta">Записаться</a>
@@ -204,56 +209,6 @@
             </div>
           </div>
         </details>
-
-        <details class="trainer-card trainer-card--slate" id="irina" style="--trainer-photo-position: 50% 15%;">
-            <summary class="trainer-card__summary">
-              <div class="trainer-card__image-wrap">
-                <img class="trainer-card__image" src="/img/tr-irina.webp" alt="Ирина Коргушова">
-                <span class="trainer-card__number">03</span>
-              </div>
-              <div class="trainer-card__body">
-                <p class="trainer-card__eyebrow">Мягкость · внимание · глубокое погружение</p>
-                <h3>Ирина Коргушова</h3>
-                <p class="trainer-card__specialization">Хатха-йога · связь с телом · спокойствие</p>
-                <p class="trainer-card__lead">Помогает настроить связь со своим телом, научиться слышать его сигналы и возвращать состояние спокойствия. Ее подход строится на мягкости, внимании и глубоком погружении в процессы.</p>
-                <div class="trainer-card__chips">
-                  <span>Хатха-йога</span>
-                  <span>Внимание к телу</span>
-                  <span>Спокойствие</span>
-                </div>
-                <div class="trainer-card__buttons">
-                  <span class="trainer-card__toggle">Подробнее</span>
-                  <a href="#0" data-booking-open data-service-name="Тренер: Ирина Коргушова" class="trainer-card__book">Записаться</a>
-                </div>
-              </div>
-            </summary>
-            <div class="trainer-card__details">
-              <div class="trainer-card__details-grid">
-                <section class="trainer-card__panel">
-                  <h4>Путь</h4>
-                  <p>Инструктор по хатха-йоге и важная опора команды «В 39-м Царстве». Ирина помогает настроить связь со своим телом, научиться слышать его сигналы и возвращать состояние спокойствия.</p>
-                </section>
-                <section class="trainer-card__panel">
-                  <h4>Что дает практика с Ириной?</h4>
-                  <ul class="bullet-list">
-                    <li><strong>Гибкость и силу:</strong> асаны помогают снять блоки, укрепить мышечный корсет и вернуть телу свободу движений.</li>
-                    <li><strong>Баланс и концентрацию:</strong> внимание к дыханию учит управлять фокусом, успокаивать ум в любых ситуациях.</li>
-                    <li><strong>Энергию и легкость:</strong> грамотно выстроенная практика помогает избавиться от напряжения, наполняя чистой, светлой энергией.</li>
-                  </ul>
-                </section>
-                <section class="trainer-card__panel">
-                  <h4>Для кого?</h4>
-                  <ul class="bullet-list">
-                    <li>Для тех, кто хочет начать заниматься йогой, но откладывал.</li>
-                    <li>Для тех, кто ищет бережный, но глубокий подход.</li>
-                    <li>Для тех, кому важно замедлиться и посвятить время себе.</li>
-                  </ul>
-                  <p style="margin-top: 1rem;">Приходите на коврик к Ирине — восстановить контакт между телом и умом, чтобы чувствовать себя целостным.</p>
-                </section>
-              </div>
-            </div>
-          </details>
-
       </div>
 
     </div>
