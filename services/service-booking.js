@@ -1,4 +1,4 @@
-(function () {
+﻿(function () {
 
   /* === ШАПКА САЙТА === */
     function addSiteHeader() {
@@ -12,21 +12,22 @@
         '<nav class="nav" id="nav">' +
           '<div class="nav__item nav__item--dropdown">' +
             '<a href="/#directions" class="nav__link nav__link--dropdown-toggle">Направления <span class="nav__caret" aria-hidden="true">▾</span></a>' +
-                        '<div class="nav__dropdown" aria-label="\u0421\u043F\u0438\u0441\u043E\u043A \u0443\u0441\u043B\u0443\u0433" style="grid-template-columns: 1fr; min-width: 240px; padding: 1rem;">' +
-              '<a href="/services/yoga">\u0419\u043E\u0433\u0430</a>' +
-              '<a href="/services/massage">\u041C\u0430\u0441\u0441\u0430\u0436</a>' +
-              '<a href="/services/pravilo">\u041F\u0440\u0430\u0432\u0418\u043B\u043E</a>' +
-              '<a href="/services/sound-meditation">\u0417\u0432\u0443\u043A\u043E\u0432\u044B\u0435 \u043C\u0435\u0434\u0438\u0442\u0430\u0446\u0438\u0438</a>' +
+            '<div class="nav__dropdown" aria-label="Список услуг" style="grid-template-columns: 1fr; min-width: 240px; padding: 1rem;">' +
+              '<a href="/services/yoga" class="nav__dropdown-link">Йога</a>' +
+              '<a href="/services/massage" class="nav__dropdown-link">Массаж</a>' +
+              '<a href="/services/pravilo" class="nav__dropdown-link">ПравИло</a>' +
+              '<a href="/services/sound-meditation" class="nav__dropdown-link">Звуковые медитации</a>' +
             '</div>' +
           '</div>' +
           '<a href="/services/trainers" class="nav__link">Тренеры</a>' +
           '<a href="/#founders" class="nav__link">О нас</a>' +
-          '<a href="#0" data-booking-open class="nav__link nav__link--cta">Записаться</a>' +
+          '<a href="#0" data-booking-open class="nav__link nav__link--cta">аписаться</a>' +
         '</nav>' +
-        '<button class="burger" id="burger" aria-label="Меню">' +
+        '<button class="burger" id="burger" aria-label="еню">' +
           '<span></span><span></span><span></span>' +
         '</button>' +
       '</div>';
+
     document.body.insertBefore(h, document.body.firstChild);
 
     /* Бургер */
@@ -296,3 +297,4 @@
     setup();
   }
 })();
+
