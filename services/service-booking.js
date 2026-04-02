@@ -12,46 +12,12 @@
         '<nav class="nav" id="nav">' +
           '<div class="nav__item nav__item--dropdown">' +
             '<a href="/#directions" class="nav__link nav__link--dropdown-toggle">Направления <span class="nav__caret" aria-hidden="true">▾</span></a>' +
-            '<div class="nav__dropdown" aria-label="Список услуг">' +
-              '<div class="nav__dropdown-group">' +
-                '<button class="nav__dropdown-title">Йога и практики <span class="nav__group-caret">▾</span></button>' +
-                '<div class="nav__dropdown-group-links">' +
-                  '<a href="/services/hatha-yoga">Хатха-йога</a>' +
-                  '<a href="/services/kundalini-yoga">Кундалини-йога</a>' +
-                  '<a href="/services/aerial-yoga">Йога в гамаках</a>' +
-                  '<a href="/services/qigong">Цигун</a>' +
-                  '<a href="/services/beloyar">Белояр</a>' +
-                '</div>' +
-              '</div>' +
-              '<div class="nav__dropdown-group">' +
-                '<button class="nav__dropdown-title">Телесная терапия <span class="nav__group-caret">▾</span></button>' +
-                '<div class="nav__dropdown-group-links">' +
-                  '<a href="/services/pravilo">ПравИло</a>' +
-                  '<a href="/services/massage">Массаж</a>' +
-                  '<a href="/services/nails">Практика на гвоздях</a>' +
-                  '<a href="/services/sound-therapy">Звукотерапия</a>' +
-                '</div>' +
-              '</div>' +
-              '<div class="nav__dropdown-group">' +
-                '<button class="nav__dropdown-title">Для двоих <span class="nav__group-caret">▾</span></button>' +
-                '<div class="nav__dropdown-group-links">' +
-                  '<a href="/services/couples-practice">Парные практики</a>' +
-                  '<a href="/services/39-shades-of-love">39 оттенков любви</a>' +
-                  '<a href="/services/date-in-studio">Свидание в студии</a>' +
-                '</div>' +
-              '</div>' +
-              '<div class="nav__dropdown-group">' +
-                '<button class="nav__dropdown-title">Комьюнити <span class="nav__group-caret">▾</span></button>' +
-                '<div class="nav__dropdown-group-links">' +
-                  '<a href="/services/mens-circle">Мужские круги</a>' +
-                  '<a href="/services/womens-circle">Женские круги</a>' +
-                  '<a href="/services/longevity-club">Клуб долголетия</a>' +
-                  '<a href="/services/events">Концерты и события</a>' +
-                '</div>' +
-              '</div>' +
+                        '<div class="nav__dropdown" aria-label="\u0421\u043F\u0438\u0441\u043E\u043A \u0443\u0441\u043B\u0443\u0433" style="grid-template-columns: 1fr; min-width: 240px; padding: 1rem; display: flex; flex-direction: column; gap: 0.5rem;">' +
+              '<a href="/services/yoga" class="nav__link">\u0419\u043E\u0433\u0430</a>' +
+              '<a href="/services/massage" class="nav__link">\u041C\u0430\u0441\u0441\u0430\u0436</a>' +
+              '<a href="/services/pravilo" class="nav__link">\u041F\u0440\u0430\u0432\u0418\u043B\u043E</a>' +
+              '<a href="/services/sound-meditation" class="nav__link">\u0417\u0432\u0443\u043A\u043E\u0432\u044B\u0435 \u043C\u0435\u0434\u0438\u0442\u0430\u0446\u0438\u0438</a>' +
             '</div>' +
-          '</div>' +
-          '<a href="/#pravilo" class="nav__link">ПравИло</a>' +
           '<a href="/services/trainers" class="nav__link">Тренеры</a>' +
           '<a href="/#founders" class="nav__link">О нас</a>' +
           '<a href="#0" data-booking-open class="nav__link nav__link--cta">Записаться</a>' +
