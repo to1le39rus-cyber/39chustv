@@ -19,11 +19,11 @@
               '<a href="/services/sound-meditation" class="nav__dropdown-link">Звуковые медитации</a>' +
             '</div>' +
           '</div>' +
-          '<a href="/services/trainers" class="nav__link">Тренеры</a>' +
+          '<a href="/services/trainers" class="nav__link">Наша команда</a>' +
           '<a href="/#founders" class="nav__link">О нас</a>' +
-          '<a href="#0" data-booking-open class="nav__link nav__link--cta">аписаться</a>' +
+          '<a href="#0" data-booking-open class="nav__link nav__link--cta">Записаться</a>' +
         '</nav>' +
-        '<button class="burger" id="burger" aria-label="еню">' +
+        '<button class="burger" id="burger" aria-label="Меню">' +
           '<span></span><span></span><span></span>' +
         '</button>' +
       '</div>';

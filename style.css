@@ -848,6 +848,7 @@ input, select, textarea { font: inherit; }
 .founders .section-tag,
 .founders .section-title,
 .founders .section-sub { text-align: center; }
+.founders .section-title { margin-bottom: 64px; }
 .founders .section-sub { margin: 0 auto 64px; }
 .founders__grid {
   display: grid;
