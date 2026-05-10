@@ -20,6 +20,7 @@
             '</div>' +
           '</div>' +
           '<a href="/services/trainers" class="nav__link">Наша команда</a>' +
+          '<a href="#reviews" class="nav__link">Отзывы</a>' +
           '<a href="/#founders" class="nav__link">О нас</a>' +
           '<a href="#0" data-booking-open class="nav__link nav__link--cta">Записаться</a>' +
         '</nav>' +
