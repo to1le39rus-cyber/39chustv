@@ -1,101 +1,20 @@
 <!doctype html>
 <html lang="ru">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-  <meta name="theme-color" content="#151613">
-  <meta name="description" content="39 ЧУВСТВО — пространство практик, событий и людей в Калининграде.">
-  <title>39 ЧУВСТВО — пространство практик</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=2">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#151613"><meta name="description" content="39 ЧУВСТВО — пространство практик, событий и людей в Калининграде."><link rel="manifest" href="manifest.webmanifest"><title>39 ЧУВСТВО — пространство практик</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet"><link rel="stylesheet" href="style.css?v=2">
 </head>
 <body>
-  <div class="app">
-    <header class="topbar">
-      <a class="brand" href="#home" aria-label="39 ЧУВСТВО">
-        <span class="brand-mark">39</span><span>ЧУВСТВО</span>
-      </a>
-      <button class="icon-btn" id="profileBtn" aria-label="Профиль">◌</button>
-    </header>
-
-    <main id="appMain">
-      <section class="screen active" id="home" data-screen>
-        <div class="hero-card">
-          <img src="img/hero.webp" alt="39 ЧУВСТВО" loading="eager">
-          <div class="hero-shade"></div>
-          <div class="hero-copy">
-            <span class="eyebrow">Калининград · Зеленоградск</span>
-            <h1>Место,<br><em>где становится тише.</em></h1>
-            <p>Йога · тело · звук · встречи · люди</p>
-            <button class="primary" data-go="events">Смотреть афишу <span>↗</span></button>
-          </div>
-        </div>
-
-        <section class="section compact-section">
-          <div class="section-head"><div><span class="kicker">Сегодня</span><h2>Что происходит</h2></div><button class="text-btn" data-go="events">Вся афиша →</button></div>
-          <article class="event-feature" data-event="sound">
-            <div class="event-date"><b>31</b><span>АВГ</span></div>
-            <div><span class="pill">Звук</span><h3>Звуковая медитация</h3><p>20:00 · 39 Чувство</p></div>
-            <button class="round-arrow" aria-label="Открыть">→</button>
-          </article>
-        </section>
-
-        <section class="section">
-          <div class="section-head"><div><span class="kicker">Выбери своё</span><h2>Направления</h2></div></div>
-          <div class="chips">
-            <button data-filter="Йога">Йога</button><button data-filter="Тело">Тело</button><button data-filter="Звук">Звук</button><button data-filter="События">События</button>
-          </div>
-          <div class="direction-grid">
-            <button class="direction direction-wide" data-filter="Йога"><img src="img/yoga.webp" alt="Йога"><span>Йога</span><small>Практики для тела и внимания</small></button>
-            <button class="direction" data-filter="Тело"><img src="img/mass.webp" alt="Массаж"><span>Тело</span><small>Массаж · ПравИло</small></button>
-            <button class="direction" data-filter="Звук"><img src="img/pravilo.webp" alt="Практики"><span>Звук и медитации</span><small>Пауза от шума</small></button>
-          </div>
-        </section>
-
-        <section class="quote-block"><p>«Не нужно становиться<br>лучшей версией себя.<br><em>Можно просто быть собой.</em>»</p></section>
-      </section>
-
-      <section class="screen" id="events" data-screen>
-        <div class="page-title"><span class="kicker">Жизнь студии</span><h1>Афиша</h1><p>Выбирай не занятие. Выбирай состояние.</p></div>
-        <div class="filter-row"><button class="filter active" data-filter="all">Все</button><button class="filter" data-filter="Йога">Йога</button><button class="filter" data-filter="Тело">Тело</button><button class="filter" data-filter="Звук">Звук</button></div>
-        <div class="events-list" id="eventsList">
-          <article class="event-card" data-type="Йога" data-event="hatha"><div class="event-thumb"><img src="img/yoga.webp" alt=""><span>Йога</span></div><div class="event-info"><b>01 СЕН · 10:00</b><h3>Хатха-йога</h3><p>Мягкая практика · 75 мин</p><div class="event-bottom"><strong>от 900 ₽</strong><button class="mini-btn">Записаться</button></div></div></article>
-          <article class="event-card" data-type="Звук" data-event="sound"><div class="event-thumb"><img src="img/hero.webp" alt=""><span>Звук</span></div><div class="event-info"><b>31 АВГ · 20:00</b><h3>Звуковая медитация</h3><p>Глубокое расслабление · 90 мин</p><div class="event-bottom"><strong>1 500 ₽</strong><button class="mini-btn">Записаться</button></div></div></article>
-          <article class="event-card" data-type="Тело" data-event="pravilo"><div class="event-thumb"><img src="img/pravilo.webp" alt=""><span>Тело</span></div><div class="event-info"><b>02 СЕН · 12:00</b><h3>ПравИло · индивидуально</h3><p>Работа с телом · 60 мин</p><div class="event-bottom"><strong>2 000 ₽</strong><button class="mini-btn">Записаться</button></div></div></article>
-          <article class="event-card" data-type="Йога" data-event="kundalini"><div class="event-thumb"><img src="img/yoga1.webp" alt=""><span>Йога</span></div><div class="event-info"><b>03 СЕН · 19:30</b><h3>Кундалини-йога</h3><p>Дыхание · движение · внимание</p><div class="event-bottom"><strong>1 000 ₽</strong><button class="mini-btn">Записаться</button></div></div></article>
-        </div>
-      </section>
-
-      <section class="screen" id="team" data-screen>
-        <div class="page-title"><span class="kicker">Люди 39</span><h1>Команда</h1><p>Те, кто создаёт пространство.</p></div>
-        <div class="team-list">
-          <article class="person"><img src="img/Ilya.webp" alt="Илья"><div><span>ПравИло · тело</span><h3>Илья</h3><p>Работа с телом, восстановление, массаж.</p><button class="text-btn">Профиль →</button></div></article>
-          <article class="person"><img src="img/tr-irina.webp" alt="Ирина"><div><span>Практики</span><h3>Ирина</h3><p>Телесные практики и индивидуальные занятия.</p><button class="text-btn">Профиль →</button></div></article>
-          <article class="person"><img src="img/tr-anyta.webp" alt="Анюта"><div><span>Йога</span><h3>Анюта</h3><p>Практики движения и внимания к себе.</p><button class="text-btn">Профиль →</button></div></article>
-          <article class="person"><img src="img/tr-anatoliy.webp" alt="Анатолий"><div><span>Йога · тело</span><h3>Анатолий</h3><p>Индивидуальные и групповые форматы.</p><button class="text-btn">Профиль →</button></div></article>
-        </div>
-      </section>
-
-      <section class="screen" id="more" data-screen>
-        <div class="page-title"><span class="kicker">39 ЧУВСТВО</span><h1>Ещё</h1><p>Всё, что помогает оставаться в контакте.</p></div>
-        <div class="menu-card"><button>О студии <span>→</span></button><button>Новости и публикации <span>→</span></button><button>Мои записи <span>→</span></button><button>Контакты и адрес <span>→</span></button></div>
-        <div class="admin-note"><span>В будущем здесь</span><strong>Личный кабинет</strong><p>Записи, история посещений, избранное и уведомления.</p></div>
-      </section>
-    </main>
-
-    <nav class="tabbar" aria-label="Основная навигация">
-      <button class="tab active" data-go="home"><span>⌂</span><small>Главная</small></button>
-      <button class="tab" data-go="events"><span>◫</span><small>Афиша</small></button>
-      <button class="tab" data-go="team"><span>◉</span><small>Люди</small></button>
-      <button class="tab" data-go="more"><span>•••</span><small>Ещё</small></button>
-    </nav>
-  </div>
-
-  <div class="modal" id="bookingModal" aria-hidden="true">
-    <div class="modal-sheet"><button class="modal-close" id="modalClose">×</button><span class="kicker">Запись</span><h2 id="modalTitle">Выбери событие</h2><p id="modalMeta"></p><form id="bookingForm"><label>Имя<input name="name" required placeholder="Как к вам обращаться?"></label><label>Телефон или Telegram<input name="contact" required placeholder="Контакт для подтверждения"></label><button class="primary full" type="submit">Оставить заявку <span>→</span></button></form><div class="success" id="success">Заявка принята. Мы свяжемся с вами для подтверждения.</div></div>
-  </div>
-  <script src="script.js?v=2"></script>
-</body>
-</html>
+<div class="app">
+<header class="topbar"><a class="brand" href="#home" aria-label="39 ЧУВСТВО"><span class="brand-mark">39</span><span>ЧУВСТВО</span></a><button class="icon-btn" id="profileBtn" aria-label="Профиль">◌</button></header>
+<main id="appMain">
+<section class="screen active" id="home" data-screen><div class="hero-card"><img src="img/hero.webp" alt="39 ЧУВСТВО"><div class="hero-shade"></div><div class="hero-copy"><span class="eyebrow">Калининград · Зеленоградск</span><h1>Место,<br><em>где становится тише.</em></h1><p>Йога · тело · звук · встречи · люди</p><button class="primary" data-go="events">Смотреть афишу <span>↗</span></button></div></div>
+<section class="section"><div class="section-head"><div><span class="kicker">Сегодня</span><h2>Что происходит</h2></div><button class="text-btn" data-go="events">Вся афиша →</button></div><article class="event-feature" data-event="sound"><div class="event-date"><b>31</b><span>АВГ</span></div><div><span class="pill">Звук</span><h3>Звуковая медитация</h3><p>20:00 · 39 Чувство</p></div><button class="round-arrow" aria-label="Открыть">→</button></article></section>
+<section class="section"><div class="section-head"><div><span class="kicker">Выбери своё</span><h2>Направления</h2></div></div><div class="chips"><button data-filter="Йога">Йога</button><button data-filter="Тело">Тело</button><button data-filter="Звук">Звук</button><button data-filter="События">События</button></div><div class="direction-grid"><button class="direction direction-wide" data-filter="Йога"><img src="img/yoga.webp" alt="Йога"><span>Йога</span><small>Практики для тела и внимания</small></button><button class="direction" data-filter="Тело"><img src="img/mass.webp" alt="Тело"><span>Тело</span><small>Массаж · ПравИло</small></button><button class="direction" data-filter="Звук"><img src="img/pravilo.webp" alt="Звук"><span>Звук и медитации</span><small>Пауза от шума</small></button></div></section>
+<section class="quote-block"><p>«Не нужно становиться<br>лучшей версией себя.<br><em>Можно просто быть собой.</em>»</p></section></section>
+<section class="screen" id="events" data-screen><div class="page-title"><span class="kicker">Жизнь студии</span><h1>Афиша</h1><p>Выбирай не занятие. Выбирай состояние.</p></div><div class="filter-row"><button class="filter active" data-filter="all">Все</button><button class="filter" data-filter="Йога">Йога</button><button class="filter" data-filter="Тело">Тело</button><button class="filter" data-filter="Звук">Звук</button></div><div class="events-list" id="eventsList"><article class="event-card" data-type="Йога" data-event="hatha"><div class="event-thumb"><img src="img/yoga.webp" alt=""><span>Йога</span></div><div class="event-info"><b>01 СЕН · 10:00</b><h3>Хатха-йога</h3><p>Мягкая практика · 75 мин</p><div class="event-bottom"><strong>от 900 ₽</strong><button class="mini-btn">Записаться</button></div></div></article><article class="event-card" data-type="Звук" data-event="sound"><div class="event-thumb"><img src="img/hero.webp" alt=""><span>Звук</span></div><div class="event-info"><b>31 АВГ · 20:00</b><h3>Звуковая медитация</h3><p>Глубокое расслабление · 90 мин</p><div class="event-bottom"><strong>1 500 ₽</strong><button class="mini-btn">Записаться</button></div></div></article><article class="event-card" data-type="Тело" data-event="pravilo"><div class="event-thumb"><img src="img/pravilo.webp" alt=""><span>Тело</span></div><div class="event-info"><b>02 СЕН · 12:00</b><h3>ПравИло · индивидуально</h3><p>Работа с телом · 60 мин</p><div class="event-bottom"><strong>2 000 ₽</strong><button class="mini-btn">Записаться</button></div></div></article><article class="event-card" data-type="Йога" data-event="kundalini"><div class="event-thumb"><img src="img/yoga1.webp" alt=""><span>Йога</span></div><div class="event-info"><b>03 СЕН · 19:30</b><h3>Кундалини-йога</h3><p>Дыхание · движение · внимание</p><div class="event-bottom"><strong>1 000 ₽</strong><button class="mini-btn">Записаться</button></div></div></article></div></section>
+<section class="screen" id="team" data-screen><div class="page-title"><span class="kicker">Люди 39</span><h1>Команда</h1><p>Те, кто создаёт пространство.</p></div><div class="team-list"><article class="person"><img src="img/Ilya.webp" alt="Илья"><div><span>ПравИло · тело</span><h3>Илья</h3><p>Работа с телом, восстановление, массаж.</p><button class="text-btn">Профиль →</button></div></article><article class="person"><img src="img/tr-irina.webp" alt="Ирина"><div><span>Практики</span><h3>Ирина</h3><p>Телесные практики и индивидуальные занятия.</p><button class="text-btn">Профиль →</button></div></article><article class="person"><img src="img/tr-anyta.webp" alt="Анюта"><div><span>Йога</span><h3>Анюта</h3><p>Практики движения и внимания к себе.</p><button class="text-btn">Профиль →</button></div></article><article class="person"><img src="img/tr-anatoliy.webp" alt="Анатолий"><div><span>Йога · тело</span><h3>Анатолий</h3><p>Индивидуальные и групповые форматы.</p><button class="text-btn">Профиль →</button></div></article></div></section>
+<section class="screen" id="more" data-screen><div class="page-title"><span class="kicker">39 ЧУВСТВО</span><h1>Ещё</h1><p>Всё, что помогает оставаться в контакте.</p></div><div class="menu-card"><button>О студии <span>→</span></button><button>Новости и публикации <span>→</span></button><button>Мои записи <span>→</span></button><button>Контакты и адрес <span>→</span></button></div><div class="admin-note"><span>Следующий слой</span><strong>Личный кабинет</strong><p>Записи, история посещений, избранное и уведомления.</p></div></section>
+</main>
+<nav class="tabbar" aria-label="Основная навигация"><button class="tab active" data-go="home"><span>⌂</span><small>Главная</small></button><button class="tab" data-go="events"><span>◫</span><small>Афиша</small></button><button class="tab" data-go="team"><span>◉</span><small>Люди</small></button><button class="tab" data-go="more"><span>•••</span><small>Ещё</small></button></nav></div>
+<div class="modal" id="bookingModal" aria-hidden="true"><div class="modal-sheet"><button class="modal-close" id="modalClose">×</button><span class="kicker">Запись</span><h2 id="modalTitle">Выбери событие</h2><p id="modalMeta"></p><form id="bookingForm"><label>Имя<input name="name" required placeholder="Как к вам обращаться?"></label><label>Телефон или Telegram<input name="contact" required placeholder="Контакт для подтверждения"></label><button class="primary full" type="submit">Оставить заявку <span>→</span></button></form><div class="success" id="success">Заявка принята. Мы свяжемся с вами для подтверждения.</div></div></div>
+<script src="script.js?v=2"></script></body></html>
